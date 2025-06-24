@@ -1,0 +1,12 @@
+
+State Machine - |spaceInvaders|fstate
+Name fstate.collide_d fstate.collide_l fstate.collide_r fstate.move_down fstate.game_over fstate.dead fstate.move_rigth fstate.move_left fstate.start 
+fstate.start 0 0 0 0 0 0 0 0 0 
+fstate.move_left 0 0 0 0 0 0 0 1 1 
+fstate.move_rigth 0 0 0 0 0 0 1 0 1 
+fstate.dead 0 0 0 0 0 1 0 0 1 
+fstate.game_over 0 0 0 0 1 0 0 0 1 
+fstate.move_down 0 0 0 1 0 0 0 0 1 
+fstate.collide_r 0 0 1 0 0 0 0 0 1 
+fstate.collide_l 0 1 0 0 0 0 0 0 1 
+fstate.collide_d 1 0 0 0 0 0 0 0 1 

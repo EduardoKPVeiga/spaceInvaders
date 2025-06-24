@@ -1,0 +1,124 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 16 16 168 144)
+	(text "spaceInvaders" (rect 5 0 89 19)(font "Intel Clear" (font_size 8)))
+	(text "inst" (rect 8 107 24 124)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clock_i" (rect 0 0 34 12)(font "Arial" ))
+		(text "clock_i" (rect 21 27 55 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "reset_i" (rect 0 0 33 12)(font "Arial" ))
+		(text "reset_i" (rect 21 43 54 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 152 32)
+		(output)
+		(text "turn_o" (rect 0 0 30 12)(font "Arial" ))
+		(text "turn_o" (rect 101 27 131 39)(font "Arial" ))
+		(line (pt 152 32)(pt 136 32))
+	)
+	(port
+		(pt 152 48)
+		(output)
+		(text "game_over_o" (rect 0 0 67 12)(font "Arial" ))
+		(text "game_over_o" (rect 64 43 131 55)(font "Arial" ))
+		(line (pt 152 48)(pt 136 48))
+	)
+	(port
+		(pt 152 64)
+		(output)
+		(text "down_o" (rect 0 0 36 12)(font "Arial" ))
+		(text "down_o" (rect 95 59 131 71)(font "Arial" ))
+		(line (pt 152 64)(pt 136 64))
+	)
+	(port
+		(pt 152 80)
+		(output)
+		(text "pos_x_o[9:0]" (rect 0 0 63 12)(font "Arial" ))
+		(text "pos_x_o[9:0]" (rect 68 75 131 87)(font "Arial" ))
+		(line (pt 152 80)(pt 136 80))
+	)
+	(port
+		(pt 152 96)
+		(output)
+		(text "pos_y_o[9:0]" (rect 0 0 64 12)(font "Arial" ))
+		(text "pos_y_o[9:0]" (rect 67 91 131 103)(font "Arial" ))
+		(line (pt 152 96)(pt 136 96))
+	)
+	(parameter
+		"move_down"
+		"0"
+		""
+	)
+	(parameter
+		"move_left"
+		"1"
+		""
+	)
+	(parameter
+		"move_rigth"
+		"2"
+		""
+	)
+	(parameter
+		"dead"
+		"3"
+		""
+	)
+	(parameter
+		"game_over"
+		"4"
+		""
+	)
+	(parameter
+		"start"
+		"5"
+		""
+	)
+	(parameter
+		"collide_r"
+		"6"
+		""
+	)
+	(parameter
+		"collide_l"
+		"7"
+		""
+	)
+	(parameter
+		"collide_d"
+		"8"
+		""
+	)
+	(drawing
+		(rectangle (rect 16 16 136 112))
+	)
+	(annotation_block (parameter)(rect 168 -64 268 16))
+)
