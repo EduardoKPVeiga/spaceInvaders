@@ -21,15 +21,17 @@ entity alien is
 		clk	: in	std_logic;
 		rst	: in	std_logic;
 		
-		pos_x_o		: out	integer range 0 to RES_WIDTH;
-		pos_y_o		: out	integer range 0 to RES_HEIGHT;
+		pos_x_o	: out	integer range 0 to RES_WIDTH ;
+		pos_y_o	: out	integer range 0 to RES_HEIGHT;
+		
 		down_i		: in	std_logic;
 		left_i		: in	std_logic;
 		right_i		: in	std_logic;
 		game_over_i	: in	std_logic;
-		down_o		: out	std_logic;
-		left_o		: out	std_logic;
-		right_o		: out	std_logic;
+		
+		down_done_o	: out	std_logic;
+		left_done_o	: out	std_logic;
+		right_done_o: out	std_logic;
 		turn_o		: out	std_logic;
 		game_over_o	: out std_logic
 	);
@@ -52,13 +54,13 @@ begin
 			elsif (down_i = '1') then
 				if (pos_y_s + ALIEN_MOVE_IT >= END_LINE) then -- Alien reach the spaceship line
 					game_over_o	<= '1';
-					down_o		<= '0';
-					right_o		<= '0';
-					left_o		<= '0';
+					down_done_o		<= '0';
+					right_done_o		<= '0';
+					left_done_o		<= '0';
 					turn_o		<= '0';
 				else
 					pos_y_s <= pos_y_s + ALIEN_MOVE_IT;
-					down_o <= '1';
+					down_done_o <= '1';
 				end if;
 				
 			elsif (left_i = '1') then
@@ -67,7 +69,7 @@ begin
 				else
 					pos_x_s <= pos_x_s - ALIEN_MOVE_IT;
 				end if;
-				left_o <= '1';
+				left_done_o <= '1';
 			
 			elsif (right_i = '1') then
 				if (pos_x_s + ALIEN_MOVE_IT >= RES_WIDTH) then -- Alien reach the screen limit
@@ -75,7 +77,7 @@ begin
 				else
 					pos_x_s <= pos_x_s + ALIEN_MOVE_IT;
 				end if;
-				right_o <= '1';
+				right_done_o <= '1';
 			
 			end if;
 			

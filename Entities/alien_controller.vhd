@@ -15,11 +15,12 @@ entity alien_controller is
 		clk	: in	std_logic;
 		rst	: in	std_logic;
 		
-		down_i		: in	std_logic_vector(QT_ALIENS downto 0);
-		left_i		: in	std_logic_vector(QT_ALIENS downto 0);
-		right_i		: in	std_logic_vector(QT_ALIENS downto 0);
+		down_done_i	: in	std_logic_vector(QT_ALIENS - 1 downto 0);
+		left_done_i	: in	std_logic_vector(QT_ALIENS - 1 downto 0);
+		right_done_i: in	std_logic_vector(QT_ALIENS - 1 downto 0);
 		turn_i		: in	std_logic;
 		game_over_i	: in	std_logic;
+		
 		down_o		: out	std_logic;
 		left_o		: out	std_logic;
 		right_o		: out	std_logic;
@@ -46,7 +47,7 @@ begin
 		
 			-- Move down handler -----------------------------------
 			if down_flag = '1' then
-				if down_i = ALL_DOWN then
+				if down_done_i = ALL_DOWN then
 					down_flag <= '0';
 					if prev_x_axis_move = '0' then
 						right_flag <= '1';

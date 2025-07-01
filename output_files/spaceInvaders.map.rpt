@@ -1,5 +1,5 @@
 Analysis & Synthesis report for spaceInvaders
-Tue Jul 01 19:40:09 2025
+Tue Jul 01 20:20:55 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -16,9 +16,63 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   8. Registers Removed During Synthesis
   9. Removed Registers Triggering Further Register Optimizations
  10. General Register Statistics
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+ 11. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:0:alien_inst
+ 12. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:1:alien_inst
+ 13. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:2:alien_inst
+ 14. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:3:alien_inst
+ 15. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:4:alien_inst
+ 16. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:5:alien_inst
+ 17. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:6:alien_inst
+ 18. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:7:alien_inst
+ 19. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:8:alien_inst
+ 20. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:9:alien_inst
+ 21. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:10:alien_inst
+ 22. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:11:alien_inst
+ 23. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:12:alien_inst
+ 24. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:13:alien_inst
+ 25. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:14:alien_inst
+ 26. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:15:alien_inst
+ 27. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:16:alien_inst
+ 28. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:17:alien_inst
+ 29. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:18:alien_inst
+ 30. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:19:alien_inst
+ 31. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:20:alien_inst
+ 32. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:21:alien_inst
+ 33. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:22:alien_inst
+ 34. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:23:alien_inst
+ 35. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:24:alien_inst
+ 36. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:25:alien_inst
+ 37. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:26:alien_inst
+ 38. Port Connectivity Checks: "alien:\ALIEN_GEN:26:alien_inst"
+ 39. Port Connectivity Checks: "alien:\ALIEN_GEN:25:alien_inst"
+ 40. Port Connectivity Checks: "alien:\ALIEN_GEN:24:alien_inst"
+ 41. Port Connectivity Checks: "alien:\ALIEN_GEN:23:alien_inst"
+ 42. Port Connectivity Checks: "alien:\ALIEN_GEN:22:alien_inst"
+ 43. Port Connectivity Checks: "alien:\ALIEN_GEN:21:alien_inst"
+ 44. Port Connectivity Checks: "alien:\ALIEN_GEN:20:alien_inst"
+ 45. Port Connectivity Checks: "alien:\ALIEN_GEN:19:alien_inst"
+ 46. Port Connectivity Checks: "alien:\ALIEN_GEN:18:alien_inst"
+ 47. Port Connectivity Checks: "alien:\ALIEN_GEN:17:alien_inst"
+ 48. Port Connectivity Checks: "alien:\ALIEN_GEN:16:alien_inst"
+ 49. Port Connectivity Checks: "alien:\ALIEN_GEN:15:alien_inst"
+ 50. Port Connectivity Checks: "alien:\ALIEN_GEN:14:alien_inst"
+ 51. Port Connectivity Checks: "alien:\ALIEN_GEN:13:alien_inst"
+ 52. Port Connectivity Checks: "alien:\ALIEN_GEN:12:alien_inst"
+ 53. Port Connectivity Checks: "alien:\ALIEN_GEN:11:alien_inst"
+ 54. Port Connectivity Checks: "alien:\ALIEN_GEN:10:alien_inst"
+ 55. Port Connectivity Checks: "alien:\ALIEN_GEN:9:alien_inst"
+ 56. Port Connectivity Checks: "alien:\ALIEN_GEN:8:alien_inst"
+ 57. Port Connectivity Checks: "alien:\ALIEN_GEN:7:alien_inst"
+ 58. Port Connectivity Checks: "alien:\ALIEN_GEN:6:alien_inst"
+ 59. Port Connectivity Checks: "alien:\ALIEN_GEN:5:alien_inst"
+ 60. Port Connectivity Checks: "alien:\ALIEN_GEN:4:alien_inst"
+ 61. Port Connectivity Checks: "alien:\ALIEN_GEN:3:alien_inst"
+ 62. Port Connectivity Checks: "alien:\ALIEN_GEN:2:alien_inst"
+ 63. Port Connectivity Checks: "alien:\ALIEN_GEN:1:alien_inst"
+ 64. Port Connectivity Checks: "alien:\ALIEN_GEN:0:alien_inst"
+ 65. Post-Synthesis Netlist Statistics for Top Partition
+ 66. Elapsed Time Per Partition
+ 67. Analysis & Synthesis Messages
 
 
 
@@ -44,16 +98,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Jul 01 19:40:09 2025       ;
+; Analysis & Synthesis Status        ; Successful - Tue Jul 01 20:20:55 2025       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; spaceInvaders                               ;
-; Top-level Entity Name              ; alien_controller                            ;
+; Top-level Entity Name              ; alien_horde                                 ;
 ; Family                             ; MAX 10                                      ;
 ; Total logic elements               ; 0                                           ;
 ;     Total combinational functions  ; 0                                           ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 92                                          ;
+; Total pins                         ; 3                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -69,7 +123,7 @@ refer to the applicable agreement for further details.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C7G     ;                    ;
-; Top-level entity name                                            ; alien_controller   ; spaceInvaders      ;
+; Top-level entity name                                            ; alien_horde        ; spaceInvaders      ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -170,9 +224,12 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                        ; Library ;
 +----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
+; Entities/alien.vhd               ; yes             ; User VHDL File  ; D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien.vhd            ;         ;
 ; Packages/resolution_pkg.vhd      ; yes             ; User VHDL File  ; D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Packages/resolution_pkg.vhd   ;         ;
 ; Packages/alien_pkg.vhd           ; yes             ; User VHDL File  ; D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Packages/alien_pkg.vhd        ;         ;
 ; Entities/alien_controller.vhd    ; yes             ; User VHDL File  ; D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd ;         ;
+; Entities/alien_horde.vhd         ; yes             ; User VHDL File  ; D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd      ;         ;
+; Packages/common_pkg.vhd          ; yes             ; User VHDL File  ; D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Packages/common_pkg.vhd       ;         ;
 +----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
 
 
@@ -196,49 +253,158 @@ refer to the applicable agreement for further details.
 ;     -- Dedicated logic registers            ; 0     ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 92    ;
+; I/O pins                                    ; 3     ;
 ;                                             ;       ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ;                                             ;       ;
 ; Maximum fan-out node                        ; clk   ;
 ; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 92    ;
+; Total fan-out                               ; 3     ;
 ; Average fan-out                             ; 0.50  ;
 +---------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                     ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+------------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name      ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+------------------+--------------+
-; |alien_controller          ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 92   ; 0            ; 0          ; |alien_controller   ; alien_controller ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; |alien_horde               ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 3    ; 0            ; 0          ; |alien_horde        ; alien_horde ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; game_over_o~reg0                      ; Stuck at VCC due to stuck port data_in ;
-; down_flag                             ; Lost fanout                            ;
-; right_flag                            ; Lost fanout                            ;
-; left_flag                             ; Lost fanout                            ;
-; prev_x_axis_move                      ; Lost fanout                            ;
-; Total Number of Removed Registers = 5 ;                                        ;
-+---------------------------------------+----------------------------------------+
++---------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                    ;
++----------------------------------------------+----------------------------------------+
+; Register name                                ; Reason for Removal                     ;
++----------------------------------------------+----------------------------------------+
+; alien:\ALIEN_GEN:26:alien_inst|game_over_o   ; Stuck at VCC due to stuck port data_in ;
+; alien:\ALIEN_GEN:25:alien_inst|game_over_o   ; Stuck at VCC due to stuck port data_in ;
+; alien:\ALIEN_GEN:24:alien_inst|game_over_o   ; Stuck at VCC due to stuck port data_in ;
+; alien:\ALIEN_GEN:23:alien_inst|game_over_o   ; Stuck at VCC due to stuck port data_in ;
+; alien:\ALIEN_GEN:22:alien_inst|game_over_o   ; Stuck at VCC due to stuck port data_in ;
+; alien:\ALIEN_GEN:21:alien_inst|game_over_o   ; Stuck at VCC due to stuck port data_in ;
+; alien:\ALIEN_GEN:20:alien_inst|game_over_o   ; Stuck at VCC due to stuck port data_in ;
+; alien:\ALIEN_GEN:19:alien_inst|game_over_o   ; Stuck at VCC due to stuck port data_in ;
+; alien:\ALIEN_GEN:18:alien_inst|game_over_o   ; Stuck at VCC due to stuck port data_in ;
+; alien:\ALIEN_GEN:17:alien_inst|game_over_o   ; Stuck at VCC due to stuck port data_in ;
+; alien:\ALIEN_GEN:16:alien_inst|game_over_o   ; Stuck at VCC due to stuck port data_in ;
+; alien:\ALIEN_GEN:15:alien_inst|game_over_o   ; Stuck at VCC due to stuck port data_in ;
+; alien:\ALIEN_GEN:14:alien_inst|game_over_o   ; Stuck at VCC due to stuck port data_in ;
+; alien:\ALIEN_GEN:13:alien_inst|game_over_o   ; Stuck at VCC due to stuck port data_in ;
+; alien:\ALIEN_GEN:12:alien_inst|game_over_o   ; Stuck at VCC due to stuck port data_in ;
+; alien:\ALIEN_GEN:11:alien_inst|game_over_o   ; Stuck at VCC due to stuck port data_in ;
+; alien:\ALIEN_GEN:10:alien_inst|game_over_o   ; Stuck at VCC due to stuck port data_in ;
+; alien:\ALIEN_GEN:9:alien_inst|game_over_o    ; Stuck at VCC due to stuck port data_in ;
+; alien:\ALIEN_GEN:8:alien_inst|game_over_o    ; Stuck at VCC due to stuck port data_in ;
+; alien:\ALIEN_GEN:7:alien_inst|game_over_o    ; Stuck at VCC due to stuck port data_in ;
+; alien:\ALIEN_GEN:6:alien_inst|game_over_o    ; Stuck at VCC due to stuck port data_in ;
+; alien:\ALIEN_GEN:5:alien_inst|game_over_o    ; Stuck at VCC due to stuck port data_in ;
+; alien:\ALIEN_GEN:4:alien_inst|game_over_o    ; Stuck at VCC due to stuck port data_in ;
+; alien:\ALIEN_GEN:3:alien_inst|game_over_o    ; Stuck at VCC due to stuck port data_in ;
+; alien:\ALIEN_GEN:2:alien_inst|game_over_o    ; Stuck at VCC due to stuck port data_in ;
+; alien:\ALIEN_GEN:1:alien_inst|game_over_o    ; Stuck at VCC due to stuck port data_in ;
+; alien:\ALIEN_GEN:0:alien_inst|game_over_o    ; Stuck at VCC due to stuck port data_in ;
+; alien_controller:controller_inst|game_over_o ; Stuck at VCC due to stuck port data_in ;
+; alien:\ALIEN_GEN:26:alien_inst|pos_x_s[2..9] ; Lost fanout                            ;
+; alien:\ALIEN_GEN:26:alien_inst|pos_y_s[2..8] ; Lost fanout                            ;
+; alien:\ALIEN_GEN:26:alien_inst|turn_o        ; Lost fanout                            ;
+; alien:\ALIEN_GEN:25:alien_inst|pos_x_s[2..9] ; Lost fanout                            ;
+; alien:\ALIEN_GEN:25:alien_inst|pos_y_s[2..8] ; Lost fanout                            ;
+; alien:\ALIEN_GEN:25:alien_inst|turn_o        ; Lost fanout                            ;
+; alien:\ALIEN_GEN:24:alien_inst|pos_x_s[2..9] ; Lost fanout                            ;
+; alien:\ALIEN_GEN:24:alien_inst|pos_y_s[2..8] ; Lost fanout                            ;
+; alien:\ALIEN_GEN:24:alien_inst|turn_o        ; Lost fanout                            ;
+; alien:\ALIEN_GEN:23:alien_inst|pos_x_s[2..9] ; Lost fanout                            ;
+; alien:\ALIEN_GEN:23:alien_inst|pos_y_s[2..8] ; Lost fanout                            ;
+; alien:\ALIEN_GEN:23:alien_inst|turn_o        ; Lost fanout                            ;
+; alien:\ALIEN_GEN:22:alien_inst|pos_x_s[2..9] ; Lost fanout                            ;
+; alien:\ALIEN_GEN:22:alien_inst|pos_y_s[2..8] ; Lost fanout                            ;
+; alien:\ALIEN_GEN:22:alien_inst|turn_o        ; Lost fanout                            ;
+; alien:\ALIEN_GEN:21:alien_inst|pos_x_s[2..9] ; Lost fanout                            ;
+; alien:\ALIEN_GEN:21:alien_inst|pos_y_s[2..8] ; Lost fanout                            ;
+; alien:\ALIEN_GEN:21:alien_inst|turn_o        ; Lost fanout                            ;
+; alien:\ALIEN_GEN:20:alien_inst|pos_x_s[2..9] ; Lost fanout                            ;
+; alien:\ALIEN_GEN:20:alien_inst|pos_y_s[2..8] ; Lost fanout                            ;
+; alien:\ALIEN_GEN:20:alien_inst|turn_o        ; Lost fanout                            ;
+; alien:\ALIEN_GEN:19:alien_inst|pos_x_s[2..9] ; Lost fanout                            ;
+; alien:\ALIEN_GEN:19:alien_inst|pos_y_s[2..8] ; Lost fanout                            ;
+; alien:\ALIEN_GEN:19:alien_inst|turn_o        ; Lost fanout                            ;
+; alien:\ALIEN_GEN:18:alien_inst|pos_x_s[2..9] ; Lost fanout                            ;
+; alien:\ALIEN_GEN:18:alien_inst|pos_y_s[2..8] ; Lost fanout                            ;
+; alien:\ALIEN_GEN:18:alien_inst|turn_o        ; Lost fanout                            ;
+; alien:\ALIEN_GEN:17:alien_inst|pos_x_s[2..9] ; Lost fanout                            ;
+; alien:\ALIEN_GEN:17:alien_inst|pos_y_s[2..8] ; Lost fanout                            ;
+; alien:\ALIEN_GEN:17:alien_inst|turn_o        ; Lost fanout                            ;
+; alien:\ALIEN_GEN:16:alien_inst|pos_x_s[2..9] ; Lost fanout                            ;
+; alien:\ALIEN_GEN:16:alien_inst|pos_y_s[2..8] ; Lost fanout                            ;
+; alien:\ALIEN_GEN:16:alien_inst|turn_o        ; Lost fanout                            ;
+; alien:\ALIEN_GEN:15:alien_inst|pos_x_s[2..9] ; Lost fanout                            ;
+; alien:\ALIEN_GEN:15:alien_inst|pos_y_s[2..8] ; Lost fanout                            ;
+; alien:\ALIEN_GEN:15:alien_inst|turn_o        ; Lost fanout                            ;
+; alien:\ALIEN_GEN:14:alien_inst|pos_x_s[2..9] ; Lost fanout                            ;
+; alien:\ALIEN_GEN:14:alien_inst|pos_y_s[2..8] ; Lost fanout                            ;
+; alien:\ALIEN_GEN:14:alien_inst|turn_o        ; Lost fanout                            ;
+; alien:\ALIEN_GEN:13:alien_inst|pos_x_s[2..9] ; Lost fanout                            ;
+; alien:\ALIEN_GEN:13:alien_inst|pos_y_s[2..8] ; Lost fanout                            ;
+; alien:\ALIEN_GEN:13:alien_inst|turn_o        ; Lost fanout                            ;
+; alien:\ALIEN_GEN:12:alien_inst|pos_x_s[2..9] ; Lost fanout                            ;
+; alien:\ALIEN_GEN:12:alien_inst|pos_y_s[2..8] ; Lost fanout                            ;
+; alien:\ALIEN_GEN:12:alien_inst|turn_o        ; Lost fanout                            ;
+; alien:\ALIEN_GEN:11:alien_inst|pos_x_s[2..9] ; Lost fanout                            ;
+; alien:\ALIEN_GEN:11:alien_inst|pos_y_s[2..8] ; Lost fanout                            ;
+; alien:\ALIEN_GEN:11:alien_inst|turn_o        ; Lost fanout                            ;
+; alien:\ALIEN_GEN:10:alien_inst|pos_x_s[2..9] ; Lost fanout                            ;
+; alien:\ALIEN_GEN:10:alien_inst|pos_y_s[2..8] ; Lost fanout                            ;
+; alien:\ALIEN_GEN:10:alien_inst|turn_o        ; Lost fanout                            ;
+; alien:\ALIEN_GEN:9:alien_inst|pos_x_s[2..9]  ; Lost fanout                            ;
+; alien:\ALIEN_GEN:9:alien_inst|pos_y_s[2..8]  ; Lost fanout                            ;
+; alien:\ALIEN_GEN:9:alien_inst|turn_o         ; Lost fanout                            ;
+; alien:\ALIEN_GEN:8:alien_inst|pos_x_s[2..9]  ; Lost fanout                            ;
+; alien:\ALIEN_GEN:8:alien_inst|pos_y_s[2..8]  ; Lost fanout                            ;
+; alien:\ALIEN_GEN:8:alien_inst|turn_o         ; Lost fanout                            ;
+; alien:\ALIEN_GEN:7:alien_inst|pos_x_s[2..9]  ; Lost fanout                            ;
+; alien:\ALIEN_GEN:7:alien_inst|pos_y_s[2..8]  ; Lost fanout                            ;
+; alien:\ALIEN_GEN:7:alien_inst|turn_o         ; Lost fanout                            ;
+; alien:\ALIEN_GEN:6:alien_inst|pos_x_s[2..9]  ; Lost fanout                            ;
+; alien:\ALIEN_GEN:6:alien_inst|pos_y_s[2..8]  ; Lost fanout                            ;
+; alien:\ALIEN_GEN:6:alien_inst|turn_o         ; Lost fanout                            ;
+; alien:\ALIEN_GEN:5:alien_inst|pos_x_s[2..9]  ; Lost fanout                            ;
+; alien:\ALIEN_GEN:5:alien_inst|pos_y_s[2..8]  ; Lost fanout                            ;
+; alien:\ALIEN_GEN:5:alien_inst|turn_o         ; Lost fanout                            ;
+; alien:\ALIEN_GEN:4:alien_inst|pos_x_s[2..9]  ; Lost fanout                            ;
+; alien:\ALIEN_GEN:4:alien_inst|pos_y_s[2..8]  ; Lost fanout                            ;
+; alien:\ALIEN_GEN:4:alien_inst|turn_o         ; Lost fanout                            ;
+; alien:\ALIEN_GEN:3:alien_inst|pos_x_s[2..9]  ; Lost fanout                            ;
+; alien:\ALIEN_GEN:3:alien_inst|pos_y_s[2..8]  ; Lost fanout                            ;
+; alien:\ALIEN_GEN:3:alien_inst|turn_o         ; Lost fanout                            ;
+; alien:\ALIEN_GEN:2:alien_inst|pos_x_s[2..9]  ; Lost fanout                            ;
+; alien:\ALIEN_GEN:2:alien_inst|pos_y_s[2..8]  ; Lost fanout                            ;
+; alien:\ALIEN_GEN:2:alien_inst|turn_o         ; Lost fanout                            ;
+; alien:\ALIEN_GEN:1:alien_inst|pos_x_s[2..9]  ; Lost fanout                            ;
+; alien:\ALIEN_GEN:1:alien_inst|pos_y_s[2..8]  ; Lost fanout                            ;
+; alien:\ALIEN_GEN:1:alien_inst|turn_o         ; Lost fanout                            ;
+; alien:\ALIEN_GEN:0:alien_inst|pos_x_s[2..9]  ; Lost fanout                            ;
+; alien:\ALIEN_GEN:0:alien_inst|pos_y_s[2..8]  ; Lost fanout                            ;
+; alien:\ALIEN_GEN:0:alien_inst|turn_o         ; Lost fanout                            ;
+; alien_controller:controller_inst|down_flag   ; Lost fanout                            ;
+; alien_controller:controller_inst|left_flag   ; Lost fanout                            ;
+; alien_controller:controller_inst|right_flag  ; Lost fanout                            ;
+; Total Number of Removed Registers = 463      ;                                        ;
++----------------------------------------------+----------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                       ;
-+------------------+---------------------------+----------------------------------------------------+
-; Register name    ; Reason for Removal        ; Registers Removed due to This Register             ;
-+------------------+---------------------------+----------------------------------------------------+
-; game_over_o~reg0 ; Stuck at VCC              ; down_flag, right_flag, left_flag, prev_x_axis_move ;
-;                  ; due to stuck port data_in ;                                                    ;
-+------------------+---------------------------+----------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                            ;
++--------------------------------------------+---------------------------+-----------------------------------------------+
+; Register name                              ; Reason for Removal        ; Registers Removed due to This Register        ;
++--------------------------------------------+---------------------------+-----------------------------------------------+
+; alien:\ALIEN_GEN:26:alien_inst|game_over_o ; Stuck at VCC              ; alien_controller:controller_inst|game_over_o, ;
+;                                            ; due to stuck port data_in ; alien_controller:controller_inst|down_flag,   ;
+;                                            ;                           ; alien_controller:controller_inst|left_flag,   ;
+;                                            ;                           ; alien_controller:controller_inst|right_flag   ;
++--------------------------------------------+---------------------------+-----------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -256,15 +422,609 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:0:alien_inst ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; init_pos_x     ; 170   ; Signed Integer                                    ;
+; init_pos_y     ; 50    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:1:alien_inst ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; init_pos_x     ; 205   ; Signed Integer                                    ;
+; init_pos_y     ; 50    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:2:alien_inst ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; init_pos_x     ; 240   ; Signed Integer                                    ;
+; init_pos_y     ; 50    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:3:alien_inst ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; init_pos_x     ; 275   ; Signed Integer                                    ;
+; init_pos_y     ; 50    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:4:alien_inst ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; init_pos_x     ; 310   ; Signed Integer                                    ;
+; init_pos_y     ; 50    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:5:alien_inst ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; init_pos_x     ; 345   ; Signed Integer                                    ;
+; init_pos_y     ; 50    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:6:alien_inst ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; init_pos_x     ; 380   ; Signed Integer                                    ;
+; init_pos_y     ; 50    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:7:alien_inst ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; init_pos_x     ; 415   ; Signed Integer                                    ;
+; init_pos_y     ; 50    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:8:alien_inst ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; init_pos_x     ; 450   ; Signed Integer                                    ;
+; init_pos_y     ; 50    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:9:alien_inst ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; init_pos_x     ; 170   ; Signed Integer                                    ;
+; init_pos_y     ; 80    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:10:alien_inst ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; init_pos_x     ; 205   ; Signed Integer                                     ;
+; init_pos_y     ; 80    ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:11:alien_inst ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; init_pos_x     ; 240   ; Signed Integer                                     ;
+; init_pos_y     ; 80    ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:12:alien_inst ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; init_pos_x     ; 275   ; Signed Integer                                     ;
+; init_pos_y     ; 80    ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:13:alien_inst ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; init_pos_x     ; 310   ; Signed Integer                                     ;
+; init_pos_y     ; 80    ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:14:alien_inst ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; init_pos_x     ; 345   ; Signed Integer                                     ;
+; init_pos_y     ; 80    ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:15:alien_inst ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; init_pos_x     ; 380   ; Signed Integer                                     ;
+; init_pos_y     ; 80    ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:16:alien_inst ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; init_pos_x     ; 415   ; Signed Integer                                     ;
+; init_pos_y     ; 80    ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:17:alien_inst ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; init_pos_x     ; 450   ; Signed Integer                                     ;
+; init_pos_y     ; 80    ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:18:alien_inst ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; init_pos_x     ; 170   ; Signed Integer                                     ;
+; init_pos_y     ; 110   ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:19:alien_inst ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; init_pos_x     ; 205   ; Signed Integer                                     ;
+; init_pos_y     ; 110   ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:20:alien_inst ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; init_pos_x     ; 240   ; Signed Integer                                     ;
+; init_pos_y     ; 110   ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:21:alien_inst ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; init_pos_x     ; 275   ; Signed Integer                                     ;
+; init_pos_y     ; 110   ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:22:alien_inst ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; init_pos_x     ; 310   ; Signed Integer                                     ;
+; init_pos_y     ; 110   ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:23:alien_inst ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; init_pos_x     ; 345   ; Signed Integer                                     ;
+; init_pos_y     ; 110   ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:24:alien_inst ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; init_pos_x     ; 380   ; Signed Integer                                     ;
+; init_pos_y     ; 110   ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:25:alien_inst ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; init_pos_x     ; 415   ; Signed Integer                                     ;
+; init_pos_y     ; 110   ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:26:alien_inst ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; init_pos_x     ; 450   ; Signed Integer                                     ;
+; init_pos_y     ; 110   ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:26:alien_inst"                                                                                                                     ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:25:alien_inst"                                                                                                                     ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:24:alien_inst"                                                                                                                     ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:23:alien_inst"                                                                                                                     ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:22:alien_inst"                                                                                                                     ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:21:alien_inst"                                                                                                                     ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:20:alien_inst"                                                                                                                     ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:19:alien_inst"                                                                                                                     ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:18:alien_inst"                                                                                                                     ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:17:alien_inst"                                                                                                                     ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:16:alien_inst"                                                                                                                     ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:15:alien_inst"                                                                                                                     ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:14:alien_inst"                                                                                                                     ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:13:alien_inst"                                                                                                                     ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:12:alien_inst"                                                                                                                     ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:11:alien_inst"                                                                                                                     ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:10:alien_inst"                                                                                                                     ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:9:alien_inst"                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:8:alien_inst"                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:7:alien_inst"                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:6:alien_inst"                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:5:alien_inst"                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:4:alien_inst"                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:3:alien_inst"                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:2:alien_inst"                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:1:alien_inst"                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:0:alien_inst"                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 92                          ;
-; cycloneiii_lcell_comb ; 2                           ;
-;     normal            ; 2                           ;
-;         0 data inputs ; 2                           ;
+; boundary_port         ; 3                           ;
+; cycloneiii_lcell_comb ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 0.00                        ;
 ; Average LUT depth     ; 0.00                        ;
@@ -286,128 +1046,76 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Jul 01 19:39:55 2025
+    Info: Processing started: Tue Jul 01 20:20:40 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off spaceInvaders -c spaceInvaders
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file entities/alien.vhd
-    Info (12022): Found design unit 1: alien-behavior File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien.vhd Line: 38
+    Info (12022): Found design unit 1: alien-behavior File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien.vhd Line: 40
     Info (12023): Found entity 1: alien File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien.vhd Line: 14
 Info (12021): Found 1 design units, including 0 entities, in source file packages/resolution_pkg.vhd
     Info (12022): Found design unit 1: resolution_pkg File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Packages/resolution_pkg.vhd Line: 10
 Info (12021): Found 1 design units, including 0 entities, in source file packages/alien_pkg.vhd
     Info (12022): Found design unit 1: alien_pkg File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Packages/alien_pkg.vhd Line: 11
 Info (12021): Found 2 design units, including 1 entities, in source file entities/alien_controller.vhd
-    Info (12022): Found design unit 1: alien_controller-behavior File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 30
+    Info (12022): Found design unit 1: alien_controller-behavior File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 31
     Info (12023): Found entity 1: alien_controller File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 13
-Info (12127): Elaborating entity "alien_controller" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at alien_controller.vhd(23): used implicit default value for signal "down_o" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 23
-Warning (10541): VHDL Signal Declaration warning at alien_controller.vhd(24): used implicit default value for signal "left_o" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 24
-Warning (10541): VHDL Signal Declaration warning at alien_controller.vhd(25): used implicit default value for signal "right_o" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 25
+Info (12021): Found 2 design units, including 1 entities, in source file entities/alien_horde.vhd
+    Info (12022): Found design unit 1: alien_horde-structure File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 26
+    Info (12023): Found entity 1: alien_horde File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 13
+Info (12021): Found 1 design units, including 0 entities, in source file packages/common_pkg.vhd
+    Info (12022): Found design unit 1: common_pkg File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Packages/common_pkg.vhd Line: 4
+Info (12127): Elaborating entity "alien_horde" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at alien_horde.vhd(85): object "aliens_pos_x_s" assigned a value but never read File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 85
+Warning (10036): Verilog HDL or VHDL warning at alien_horde.vhd(86): object "aliens_pos_y_s" assigned a value but never read File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 86
+Info (12128): Elaborating entity "alien_controller" for hierarchy "alien_controller:controller_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 91
+Warning (10541): VHDL Signal Declaration warning at alien_controller.vhd(24): used implicit default value for signal "down_o" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 24
+Warning (10541): VHDL Signal Declaration warning at alien_controller.vhd(25): used implicit default value for signal "left_o" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 25
+Warning (10541): VHDL Signal Declaration warning at alien_controller.vhd(26): used implicit default value for signal "right_o" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 26
+Warning (10620): VHDL warning at alien_controller.vhd(50): comparison between unequal length operands always returns FALSE File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 50
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:0:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:1:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:2:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:3:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:4:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:5:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:6:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:7:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:8:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:9:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:10:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:11:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:12:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:13:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:14:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:15:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:16:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:17:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:18:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:19:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:20:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:21:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:22:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:23:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:24:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:25:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:26:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
+Warning (12241): 27 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "down_o" is stuck at GND File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 23
-    Warning (13410): Pin "left_o" is stuck at GND File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 24
-    Warning (13410): Pin "right_o" is stuck at GND File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 25
-    Warning (13410): Pin "game_over_o" is stuck at VCC File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 26
-Info (17049): 4 registers lost all their fanouts during netlist optimizations.
+    Warning (13410): Pin "game_over" is stuck at VCC File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 22
+Info (17049): 435 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 88 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 15
-    Warning (15610): No output dependent on input pin "rst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 16
-    Warning (15610): No output dependent on input pin "down_i[0]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 18
-    Warning (15610): No output dependent on input pin "down_i[1]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 18
-    Warning (15610): No output dependent on input pin "down_i[2]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 18
-    Warning (15610): No output dependent on input pin "down_i[3]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 18
-    Warning (15610): No output dependent on input pin "down_i[4]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 18
-    Warning (15610): No output dependent on input pin "down_i[5]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 18
-    Warning (15610): No output dependent on input pin "down_i[6]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 18
-    Warning (15610): No output dependent on input pin "down_i[7]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 18
-    Warning (15610): No output dependent on input pin "down_i[8]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 18
-    Warning (15610): No output dependent on input pin "down_i[9]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 18
-    Warning (15610): No output dependent on input pin "down_i[10]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 18
-    Warning (15610): No output dependent on input pin "down_i[11]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 18
-    Warning (15610): No output dependent on input pin "down_i[12]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 18
-    Warning (15610): No output dependent on input pin "down_i[13]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 18
-    Warning (15610): No output dependent on input pin "down_i[14]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 18
-    Warning (15610): No output dependent on input pin "down_i[15]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 18
-    Warning (15610): No output dependent on input pin "down_i[16]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 18
-    Warning (15610): No output dependent on input pin "down_i[17]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 18
-    Warning (15610): No output dependent on input pin "down_i[18]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 18
-    Warning (15610): No output dependent on input pin "down_i[19]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 18
-    Warning (15610): No output dependent on input pin "down_i[20]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 18
-    Warning (15610): No output dependent on input pin "down_i[21]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 18
-    Warning (15610): No output dependent on input pin "down_i[22]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 18
-    Warning (15610): No output dependent on input pin "down_i[23]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 18
-    Warning (15610): No output dependent on input pin "down_i[24]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 18
-    Warning (15610): No output dependent on input pin "down_i[25]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 18
-    Warning (15610): No output dependent on input pin "down_i[26]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 18
-    Warning (15610): No output dependent on input pin "down_i[27]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 18
-    Warning (15610): No output dependent on input pin "left_i[0]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 19
-    Warning (15610): No output dependent on input pin "left_i[1]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 19
-    Warning (15610): No output dependent on input pin "left_i[2]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 19
-    Warning (15610): No output dependent on input pin "left_i[3]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 19
-    Warning (15610): No output dependent on input pin "left_i[4]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 19
-    Warning (15610): No output dependent on input pin "left_i[5]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 19
-    Warning (15610): No output dependent on input pin "left_i[6]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 19
-    Warning (15610): No output dependent on input pin "left_i[7]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 19
-    Warning (15610): No output dependent on input pin "left_i[8]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 19
-    Warning (15610): No output dependent on input pin "left_i[9]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 19
-    Warning (15610): No output dependent on input pin "left_i[10]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 19
-    Warning (15610): No output dependent on input pin "left_i[11]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 19
-    Warning (15610): No output dependent on input pin "left_i[12]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 19
-    Warning (15610): No output dependent on input pin "left_i[13]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 19
-    Warning (15610): No output dependent on input pin "left_i[14]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 19
-    Warning (15610): No output dependent on input pin "left_i[15]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 19
-    Warning (15610): No output dependent on input pin "left_i[16]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 19
-    Warning (15610): No output dependent on input pin "left_i[17]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 19
-    Warning (15610): No output dependent on input pin "left_i[18]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 19
-    Warning (15610): No output dependent on input pin "left_i[19]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 19
-    Warning (15610): No output dependent on input pin "left_i[20]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 19
-    Warning (15610): No output dependent on input pin "left_i[21]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 19
-    Warning (15610): No output dependent on input pin "left_i[22]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 19
-    Warning (15610): No output dependent on input pin "left_i[23]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 19
-    Warning (15610): No output dependent on input pin "left_i[24]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 19
-    Warning (15610): No output dependent on input pin "left_i[25]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 19
-    Warning (15610): No output dependent on input pin "left_i[26]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 19
-    Warning (15610): No output dependent on input pin "left_i[27]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 19
-    Warning (15610): No output dependent on input pin "right_i[0]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 20
-    Warning (15610): No output dependent on input pin "right_i[1]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 20
-    Warning (15610): No output dependent on input pin "right_i[2]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 20
-    Warning (15610): No output dependent on input pin "right_i[3]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 20
-    Warning (15610): No output dependent on input pin "right_i[4]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 20
-    Warning (15610): No output dependent on input pin "right_i[5]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 20
-    Warning (15610): No output dependent on input pin "right_i[6]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 20
-    Warning (15610): No output dependent on input pin "right_i[7]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 20
-    Warning (15610): No output dependent on input pin "right_i[8]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 20
-    Warning (15610): No output dependent on input pin "right_i[9]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 20
-    Warning (15610): No output dependent on input pin "right_i[10]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 20
-    Warning (15610): No output dependent on input pin "right_i[11]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 20
-    Warning (15610): No output dependent on input pin "right_i[12]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 20
-    Warning (15610): No output dependent on input pin "right_i[13]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 20
-    Warning (15610): No output dependent on input pin "right_i[14]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 20
-    Warning (15610): No output dependent on input pin "right_i[15]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 20
-    Warning (15610): No output dependent on input pin "right_i[16]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 20
-    Warning (15610): No output dependent on input pin "right_i[17]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 20
-    Warning (15610): No output dependent on input pin "right_i[18]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 20
-    Warning (15610): No output dependent on input pin "right_i[19]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 20
-    Warning (15610): No output dependent on input pin "right_i[20]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 20
-    Warning (15610): No output dependent on input pin "right_i[21]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 20
-    Warning (15610): No output dependent on input pin "right_i[22]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 20
-    Warning (15610): No output dependent on input pin "right_i[23]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 20
-    Warning (15610): No output dependent on input pin "right_i[24]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 20
-    Warning (15610): No output dependent on input pin "right_i[25]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 20
-    Warning (15610): No output dependent on input pin "right_i[26]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 20
-    Warning (15610): No output dependent on input pin "right_i[27]" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 20
-    Warning (15610): No output dependent on input pin "turn_i" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 21
-    Warning (15610): No output dependent on input pin "game_over_i" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 22
-Info (21057): Implemented 92 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 88 input pins
-    Info (21059): Implemented 4 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 98 warnings
-    Info: Peak virtual memory: 4791 megabytes
-    Info: Processing ended: Tue Jul 01 19:40:09 2025
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:31
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 15
+    Warning (15610): No output dependent on input pin "rst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 16
+Info (21057): Implemented 3 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 1 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 4795 megabytes
+    Info: Processing ended: Tue Jul 01 20:20:55 2025
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:32
 
 

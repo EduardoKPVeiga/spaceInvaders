@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Tue Jul 01 19:40:09 2025
+Analysis & Synthesis Status : Successful - Tue Jul 01 20:20:55 2025
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : spaceInvaders
-Top-level Entity Name : alien_controller
+Top-level Entity Name : alien_horde
 Family : MAX 10
 Total logic elements : 0
     Total combinational functions : 0
     Dedicated logic registers : 0
 Total registers : 0
-Total pins : 92
+Total pins : 3
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
