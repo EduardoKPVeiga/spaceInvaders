@@ -1,0 +1,16 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+---------------------------------------------------------------------------
+
+-- Screen resolution
+-- @author	: EKPV
+-- @date		: 01/07/25
+
+---------------------------------------------------------------------------
+
+package alien_pkg is
+	constant QT_ALIENS_PER_LINE	: integer	:= 9;
+	constant QT_LINES					: integer	:= 3;
+   constant QT_ALIENS				: integer	:= QUANTITY_ALIENS_PER_LINE * QT_LINES;
+end package alien_pkg;

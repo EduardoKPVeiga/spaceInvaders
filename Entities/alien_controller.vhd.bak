@@ -1,0 +1,10 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use work.resolution_pkg.all;
+use work.alien_pkg.all;
+
+---------------------------------------------------------------------------
+
+-- Alien controller, will control all aliens
+
+---------------------------------------------------------------------------
