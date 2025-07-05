@@ -1,5 +1,5 @@
 Analysis & Synthesis report for spaceInvaders
-Tue Jul 01 20:20:55 2025
+Sat Jul 05 20:50:06 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -16,63 +16,93 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   8. Registers Removed During Synthesis
   9. Removed Registers Triggering Further Register Optimizations
  10. General Register Statistics
- 11. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:0:alien_inst
- 12. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:1:alien_inst
- 13. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:2:alien_inst
- 14. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:3:alien_inst
- 15. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:4:alien_inst
- 16. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:5:alien_inst
- 17. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:6:alien_inst
- 18. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:7:alien_inst
- 19. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:8:alien_inst
- 20. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:9:alien_inst
- 21. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:10:alien_inst
- 22. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:11:alien_inst
- 23. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:12:alien_inst
- 24. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:13:alien_inst
- 25. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:14:alien_inst
- 26. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:15:alien_inst
- 27. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:16:alien_inst
- 28. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:17:alien_inst
- 29. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:18:alien_inst
- 30. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:19:alien_inst
- 31. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:20:alien_inst
- 32. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:21:alien_inst
- 33. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:22:alien_inst
- 34. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:23:alien_inst
- 35. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:24:alien_inst
- 36. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:25:alien_inst
- 37. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:26:alien_inst
- 38. Port Connectivity Checks: "alien:\ALIEN_GEN:26:alien_inst"
- 39. Port Connectivity Checks: "alien:\ALIEN_GEN:25:alien_inst"
- 40. Port Connectivity Checks: "alien:\ALIEN_GEN:24:alien_inst"
- 41. Port Connectivity Checks: "alien:\ALIEN_GEN:23:alien_inst"
- 42. Port Connectivity Checks: "alien:\ALIEN_GEN:22:alien_inst"
- 43. Port Connectivity Checks: "alien:\ALIEN_GEN:21:alien_inst"
- 44. Port Connectivity Checks: "alien:\ALIEN_GEN:20:alien_inst"
- 45. Port Connectivity Checks: "alien:\ALIEN_GEN:19:alien_inst"
- 46. Port Connectivity Checks: "alien:\ALIEN_GEN:18:alien_inst"
- 47. Port Connectivity Checks: "alien:\ALIEN_GEN:17:alien_inst"
- 48. Port Connectivity Checks: "alien:\ALIEN_GEN:16:alien_inst"
- 49. Port Connectivity Checks: "alien:\ALIEN_GEN:15:alien_inst"
- 50. Port Connectivity Checks: "alien:\ALIEN_GEN:14:alien_inst"
- 51. Port Connectivity Checks: "alien:\ALIEN_GEN:13:alien_inst"
- 52. Port Connectivity Checks: "alien:\ALIEN_GEN:12:alien_inst"
- 53. Port Connectivity Checks: "alien:\ALIEN_GEN:11:alien_inst"
- 54. Port Connectivity Checks: "alien:\ALIEN_GEN:10:alien_inst"
- 55. Port Connectivity Checks: "alien:\ALIEN_GEN:9:alien_inst"
- 56. Port Connectivity Checks: "alien:\ALIEN_GEN:8:alien_inst"
- 57. Port Connectivity Checks: "alien:\ALIEN_GEN:7:alien_inst"
- 58. Port Connectivity Checks: "alien:\ALIEN_GEN:6:alien_inst"
- 59. Port Connectivity Checks: "alien:\ALIEN_GEN:5:alien_inst"
- 60. Port Connectivity Checks: "alien:\ALIEN_GEN:4:alien_inst"
- 61. Port Connectivity Checks: "alien:\ALIEN_GEN:3:alien_inst"
- 62. Port Connectivity Checks: "alien:\ALIEN_GEN:2:alien_inst"
- 63. Port Connectivity Checks: "alien:\ALIEN_GEN:1:alien_inst"
- 64. Port Connectivity Checks: "alien:\ALIEN_GEN:0:alien_inst"
- 65. Post-Synthesis Netlist Statistics for Top Partition
- 66. Elapsed Time Per Partition
- 67. Analysis & Synthesis Messages
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: VGA_drvr:vga_driver_inst
+ 13. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:0:alien_inst
+ 14. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:1:alien_inst
+ 15. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:2:alien_inst
+ 16. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:3:alien_inst
+ 17. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:4:alien_inst
+ 18. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:5:alien_inst
+ 19. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:6:alien_inst
+ 20. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:7:alien_inst
+ 21. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:8:alien_inst
+ 22. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:9:alien_inst
+ 23. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:10:alien_inst
+ 24. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:11:alien_inst
+ 25. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:12:alien_inst
+ 26. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:13:alien_inst
+ 27. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:14:alien_inst
+ 28. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:15:alien_inst
+ 29. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:16:alien_inst
+ 30. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:17:alien_inst
+ 31. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:18:alien_inst
+ 32. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:19:alien_inst
+ 33. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:20:alien_inst
+ 34. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:21:alien_inst
+ 35. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:22:alien_inst
+ 36. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:23:alien_inst
+ 37. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:24:alien_inst
+ 38. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:25:alien_inst
+ 39. Parameter Settings for User Entity Instance: alien:\ALIEN_GEN:26:alien_inst
+ 40. Port Connectivity Checks: "alien_draw:\ALIEN_GEN:26:alien_draw_inst"
+ 41. Port Connectivity Checks: "alien:\ALIEN_GEN:26:alien_inst"
+ 42. Port Connectivity Checks: "alien_draw:\ALIEN_GEN:25:alien_draw_inst"
+ 43. Port Connectivity Checks: "alien:\ALIEN_GEN:25:alien_inst"
+ 44. Port Connectivity Checks: "alien_draw:\ALIEN_GEN:24:alien_draw_inst"
+ 45. Port Connectivity Checks: "alien:\ALIEN_GEN:24:alien_inst"
+ 46. Port Connectivity Checks: "alien_draw:\ALIEN_GEN:23:alien_draw_inst"
+ 47. Port Connectivity Checks: "alien:\ALIEN_GEN:23:alien_inst"
+ 48. Port Connectivity Checks: "alien_draw:\ALIEN_GEN:22:alien_draw_inst"
+ 49. Port Connectivity Checks: "alien:\ALIEN_GEN:22:alien_inst"
+ 50. Port Connectivity Checks: "alien_draw:\ALIEN_GEN:21:alien_draw_inst"
+ 51. Port Connectivity Checks: "alien:\ALIEN_GEN:21:alien_inst"
+ 52. Port Connectivity Checks: "alien_draw:\ALIEN_GEN:20:alien_draw_inst"
+ 53. Port Connectivity Checks: "alien:\ALIEN_GEN:20:alien_inst"
+ 54. Port Connectivity Checks: "alien_draw:\ALIEN_GEN:19:alien_draw_inst"
+ 55. Port Connectivity Checks: "alien:\ALIEN_GEN:19:alien_inst"
+ 56. Port Connectivity Checks: "alien_draw:\ALIEN_GEN:18:alien_draw_inst"
+ 57. Port Connectivity Checks: "alien:\ALIEN_GEN:18:alien_inst"
+ 58. Port Connectivity Checks: "alien_draw:\ALIEN_GEN:17:alien_draw_inst"
+ 59. Port Connectivity Checks: "alien:\ALIEN_GEN:17:alien_inst"
+ 60. Port Connectivity Checks: "alien_draw:\ALIEN_GEN:16:alien_draw_inst"
+ 61. Port Connectivity Checks: "alien:\ALIEN_GEN:16:alien_inst"
+ 62. Port Connectivity Checks: "alien_draw:\ALIEN_GEN:15:alien_draw_inst"
+ 63. Port Connectivity Checks: "alien:\ALIEN_GEN:15:alien_inst"
+ 64. Port Connectivity Checks: "alien_draw:\ALIEN_GEN:14:alien_draw_inst"
+ 65. Port Connectivity Checks: "alien:\ALIEN_GEN:14:alien_inst"
+ 66. Port Connectivity Checks: "alien_draw:\ALIEN_GEN:13:alien_draw_inst"
+ 67. Port Connectivity Checks: "alien:\ALIEN_GEN:13:alien_inst"
+ 68. Port Connectivity Checks: "alien_draw:\ALIEN_GEN:12:alien_draw_inst"
+ 69. Port Connectivity Checks: "alien:\ALIEN_GEN:12:alien_inst"
+ 70. Port Connectivity Checks: "alien_draw:\ALIEN_GEN:11:alien_draw_inst"
+ 71. Port Connectivity Checks: "alien:\ALIEN_GEN:11:alien_inst"
+ 72. Port Connectivity Checks: "alien_draw:\ALIEN_GEN:10:alien_draw_inst"
+ 73. Port Connectivity Checks: "alien:\ALIEN_GEN:10:alien_inst"
+ 74. Port Connectivity Checks: "alien_draw:\ALIEN_GEN:9:alien_draw_inst"
+ 75. Port Connectivity Checks: "alien:\ALIEN_GEN:9:alien_inst"
+ 76. Port Connectivity Checks: "alien_draw:\ALIEN_GEN:8:alien_draw_inst"
+ 77. Port Connectivity Checks: "alien:\ALIEN_GEN:8:alien_inst"
+ 78. Port Connectivity Checks: "alien_draw:\ALIEN_GEN:7:alien_draw_inst"
+ 79. Port Connectivity Checks: "alien:\ALIEN_GEN:7:alien_inst"
+ 80. Port Connectivity Checks: "alien_draw:\ALIEN_GEN:6:alien_draw_inst"
+ 81. Port Connectivity Checks: "alien:\ALIEN_GEN:6:alien_inst"
+ 82. Port Connectivity Checks: "alien_draw:\ALIEN_GEN:5:alien_draw_inst"
+ 83. Port Connectivity Checks: "alien:\ALIEN_GEN:5:alien_inst"
+ 84. Port Connectivity Checks: "alien_draw:\ALIEN_GEN:4:alien_draw_inst"
+ 85. Port Connectivity Checks: "alien:\ALIEN_GEN:4:alien_inst"
+ 86. Port Connectivity Checks: "alien_draw:\ALIEN_GEN:3:alien_draw_inst"
+ 87. Port Connectivity Checks: "alien:\ALIEN_GEN:3:alien_inst"
+ 88. Port Connectivity Checks: "alien_draw:\ALIEN_GEN:2:alien_draw_inst"
+ 89. Port Connectivity Checks: "alien:\ALIEN_GEN:2:alien_inst"
+ 90. Port Connectivity Checks: "alien_draw:\ALIEN_GEN:1:alien_draw_inst"
+ 91. Port Connectivity Checks: "alien:\ALIEN_GEN:1:alien_inst"
+ 92. Port Connectivity Checks: "alien_draw:\ALIEN_GEN:0:alien_draw_inst"
+ 93. Port Connectivity Checks: "alien:\ALIEN_GEN:0:alien_inst"
+ 94. Port Connectivity Checks: "VGA_drvr:vga_driver_inst"
+ 95. Post-Synthesis Netlist Statistics for Top Partition
+ 96. Elapsed Time Per Partition
+ 97. Analysis & Synthesis Messages
 
 
 
@@ -98,16 +128,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Jul 01 20:20:55 2025       ;
+; Analysis & Synthesis Status        ; Successful - Sat Jul 05 20:50:06 2025       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; spaceInvaders                               ;
 ; Top-level Entity Name              ; alien_horde                                 ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 0                                           ;
-;     Total combinational functions  ; 0                                           ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 3                                           ;
+; Total logic elements               ; 42                                          ;
+;     Total combinational functions  ; 42                                          ;
+;     Dedicated logic registers      ; 20                                          ;
+; Total registers                    ; 20                                          ;
+; Total pins                         ; 18                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -125,6 +155,8 @@ refer to the applicable agreement for further details.
 ; Device                                                           ; 10M50DAF484C7G     ;                    ;
 ; Top-level entity name                                            ; alien_horde        ; spaceInvaders      ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; VHDL Show LMF Mapping Messages                                   ; Off                ;                    ;
+; VHDL Version                                                     ; VHDL_2008          ; VHDL_1993          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                      ; Off                ; Off                ;
@@ -133,7 +165,6 @@ refer to the applicable agreement for further details.
 ; Preserve fewer node names                                        ; On                 ; On                 ;
 ; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
 ; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
 ; State Machine Processing                                         ; Auto               ; Auto               ;
 ; Safe State Machine                                               ; Off                ; Off                ;
 ; Extract Verilog State Machines                                   ; On                 ; On                 ;
@@ -212,10 +243,11 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -224,53 +256,56 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                        ; Library ;
 +----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
+; Entities/VGA_drvr.vhd            ; yes             ; User VHDL File  ; D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/VGA_drvr.vhd         ;         ;
 ; Entities/alien.vhd               ; yes             ; User VHDL File  ; D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien.vhd            ;         ;
 ; Packages/resolution_pkg.vhd      ; yes             ; User VHDL File  ; D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Packages/resolution_pkg.vhd   ;         ;
 ; Packages/alien_pkg.vhd           ; yes             ; User VHDL File  ; D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Packages/alien_pkg.vhd        ;         ;
 ; Entities/alien_controller.vhd    ; yes             ; User VHDL File  ; D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd ;         ;
 ; Entities/alien_horde.vhd         ; yes             ; User VHDL File  ; D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd      ;         ;
-; Packages/common_pkg.vhd          ; yes             ; User VHDL File  ; D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Packages/common_pkg.vhd       ;         ;
+; Entities/alien_draw.vhd          ; yes             ; User VHDL File  ; D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_draw.vhd       ;         ;
 +----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-;                                             ;       ;
-; Total combinational functions               ; 0     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 3     ;
-;                                             ;       ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 3     ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
++------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                        ;
++---------------------------------------------+--------------------------------------+
+; Resource                                    ; Usage                                ;
++---------------------------------------------+--------------------------------------+
+; Estimated Total logic elements              ; 42                                   ;
+;                                             ;                                      ;
+; Total combinational functions               ; 42                                   ;
+; Logic element usage by number of LUT inputs ;                                      ;
+;     -- 4 input functions                    ; 12                                   ;
+;     -- 3 input functions                    ; 8                                    ;
+;     -- <=2 input functions                  ; 22                                   ;
+;                                             ;                                      ;
+; Logic elements by mode                      ;                                      ;
+;     -- normal mode                          ; 24                                   ;
+;     -- arithmetic mode                      ; 18                                   ;
+;                                             ;                                      ;
+; Total registers                             ; 20                                   ;
+;     -- Dedicated logic registers            ; 20                                   ;
+;     -- I/O registers                        ; 0                                    ;
+;                                             ;                                      ;
+; I/O pins                                    ; 18                                   ;
+;                                             ;                                      ;
+; Embedded Multiplier 9-bit elements          ; 0                                    ;
+;                                             ;                                      ;
+; Maximum fan-out node                        ; VGA_drvr:vga_driver_inst|LessThan5~2 ;
+; Maximum fan-out                             ; 28                                   ;
+; Total fan-out                               ; 212                                  ;
+; Average fan-out                             ; 2.16                                 ;
++---------------------------------------------+--------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |alien_horde               ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 3    ; 0            ; 0          ; |alien_horde        ; alien_horde ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                     ;
++-------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                   ; Entity Name ; Library Name ;
++-------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------+-------------+--------------+
+; |alien_horde                  ; 42 (0)              ; 20 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 18   ; 0            ; 0          ; |alien_horde                          ; alien_horde ; work         ;
+;    |VGA_drvr:vga_driver_inst| ; 42 (42)             ; 20 (20)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |alien_horde|VGA_drvr:vga_driver_inst ; VGA_drvr    ; work         ;
++-------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -279,6 +314,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+----------------------------------------+
 ; Register name                                ; Reason for Removal                     ;
 +----------------------------------------------+----------------------------------------+
+; VGA_drvr:vga_driver_inst|red[0..3]           ; Stuck at GND due to stuck port data_in ;
+; VGA_drvr:vga_driver_inst|green[0..3]         ; Stuck at GND due to stuck port data_in ;
 ; alien:\ALIEN_GEN:26:alien_inst|game_over_o   ; Stuck at VCC due to stuck port data_in ;
 ; alien:\ALIEN_GEN:25:alien_inst|game_over_o   ; Stuck at VCC due to stuck port data_in ;
 ; alien:\ALIEN_GEN:24:alien_inst|game_over_o   ; Stuck at VCC due to stuck port data_in ;
@@ -391,7 +428,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; alien_controller:controller_inst|down_flag   ; Lost fanout                            ;
 ; alien_controller:controller_inst|left_flag   ; Lost fanout                            ;
 ; alien_controller:controller_inst|right_flag  ; Lost fanout                            ;
-; Total Number of Removed Registers = 463      ;                                        ;
+; VGA_drvr:vga_driver_inst|blue[0..3]          ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 475      ;                                        ;
 +----------------------------------------------+----------------------------------------+
 
 
@@ -412,14 +450,45 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 20    ;
+; Number of registers using Synchronous Clear  ; 10    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 20    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 8     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |alien_horde|VGA_drvr:vga_driver_inst|v_count[9] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: VGA_drvr:vga_driver_inst ;
++-----------------+-------+---------------------------------------------+
+; Parameter Name  ; Value ; Type                                        ;
++-----------------+-------+---------------------------------------------+
+; H_back_porch    ; 48    ; Signed Integer                              ;
+; H_display       ; 640   ; Signed Integer                              ;
+; H_front_porch   ; 16    ; Signed Integer                              ;
+; H_retrace       ; 96    ; Signed Integer                              ;
+; V_back_porch    ; 33    ; Signed Integer                              ;
+; V_display       ; 480   ; Signed Integer                              ;
+; V_front_porch   ; 10    ; Signed Integer                              ;
+; V_retrace       ; 2     ; Signed Integer                              ;
+; Color_bits      ; 4     ; Signed Integer                              ;
+; H_sync_polarity ; '0'   ; Enumerated                                  ;
+; V_sync_polarity ; '0'   ; Enumerated                                  ;
+; H_counter_size  ; 10    ; Signed Integer                              ;
+; V_counter_size  ; 10    ; Signed Integer                              ;
++-----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +----------------------------------------------------------------------------+
@@ -719,301 +788,609 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alien:\ALIEN_GEN:26:alien_inst"                                                                                                                     ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien_draw:\ALIEN_GEN:26:alien_draw_inst"                                                                                                                     ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; alien_pos_x_i[31..10] ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; alien_pos_y_i[31..9]  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; draw_o                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; clk                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; rst                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alien:\ALIEN_GEN:25:alien_inst"                                                                                                                     ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:26:alien_inst"                                                                                                                    ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                      ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; game_over_i ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alien:\ALIEN_GEN:24:alien_inst"                                                                                                                     ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien_draw:\ALIEN_GEN:25:alien_draw_inst"                                                                                                                     ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; alien_pos_x_i[31..10] ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; alien_pos_y_i[31..9]  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; draw_o                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; clk                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; rst                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alien:\ALIEN_GEN:23:alien_inst"                                                                                                                     ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:25:alien_inst"                                                                                                                    ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                      ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; game_over_i ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alien:\ALIEN_GEN:22:alien_inst"                                                                                                                     ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien_draw:\ALIEN_GEN:24:alien_draw_inst"                                                                                                                     ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; alien_pos_x_i[31..10] ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; alien_pos_y_i[31..9]  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; draw_o                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; clk                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; rst                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alien:\ALIEN_GEN:21:alien_inst"                                                                                                                     ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:24:alien_inst"                                                                                                                    ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                      ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; game_over_i ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alien:\ALIEN_GEN:20:alien_inst"                                                                                                                     ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien_draw:\ALIEN_GEN:23:alien_draw_inst"                                                                                                                     ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; alien_pos_x_i[31..10] ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; alien_pos_y_i[31..9]  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; draw_o                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; clk                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; rst                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alien:\ALIEN_GEN:19:alien_inst"                                                                                                                     ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:23:alien_inst"                                                                                                                    ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                      ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; game_over_i ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alien:\ALIEN_GEN:18:alien_inst"                                                                                                                     ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien_draw:\ALIEN_GEN:22:alien_draw_inst"                                                                                                                     ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; alien_pos_x_i[31..10] ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; alien_pos_y_i[31..9]  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; draw_o                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; clk                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; rst                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alien:\ALIEN_GEN:17:alien_inst"                                                                                                                     ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:22:alien_inst"                                                                                                                    ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                      ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; game_over_i ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alien:\ALIEN_GEN:16:alien_inst"                                                                                                                     ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien_draw:\ALIEN_GEN:21:alien_draw_inst"                                                                                                                     ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; alien_pos_x_i[31..10] ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; alien_pos_y_i[31..9]  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; draw_o                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; clk                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; rst                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alien:\ALIEN_GEN:15:alien_inst"                                                                                                                     ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:21:alien_inst"                                                                                                                    ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                      ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; game_over_i ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alien:\ALIEN_GEN:14:alien_inst"                                                                                                                     ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien_draw:\ALIEN_GEN:20:alien_draw_inst"                                                                                                                     ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; alien_pos_x_i[31..10] ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; alien_pos_y_i[31..9]  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; draw_o                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; clk                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; rst                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alien:\ALIEN_GEN:13:alien_inst"                                                                                                                     ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:20:alien_inst"                                                                                                                    ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                      ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; game_over_i ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alien:\ALIEN_GEN:12:alien_inst"                                                                                                                     ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien_draw:\ALIEN_GEN:19:alien_draw_inst"                                                                                                                     ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; alien_pos_x_i[31..10] ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; alien_pos_y_i[31..9]  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; draw_o                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; clk                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; rst                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alien:\ALIEN_GEN:11:alien_inst"                                                                                                                     ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:19:alien_inst"                                                                                                                    ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                      ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; game_over_i ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alien:\ALIEN_GEN:10:alien_inst"                                                                                                                     ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien_draw:\ALIEN_GEN:18:alien_draw_inst"                                                                                                                     ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; alien_pos_x_i[31..10] ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; alien_pos_y_i[31..9]  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; draw_o                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; clk                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; rst                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alien:\ALIEN_GEN:9:alien_inst"                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:18:alien_inst"                                                                                                                    ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                      ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; game_over_i ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alien:\ALIEN_GEN:8:alien_inst"                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien_draw:\ALIEN_GEN:17:alien_draw_inst"                                                                                                                     ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; alien_pos_x_i[31..10] ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; alien_pos_y_i[31..9]  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; draw_o                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; clk                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; rst                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alien:\ALIEN_GEN:7:alien_inst"                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:17:alien_inst"                                                                                                                    ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                      ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; game_over_i ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alien:\ALIEN_GEN:6:alien_inst"                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien_draw:\ALIEN_GEN:16:alien_draw_inst"                                                                                                                     ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; alien_pos_x_i[31..10] ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; alien_pos_y_i[31..9]  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; draw_o                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; clk                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; rst                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alien:\ALIEN_GEN:5:alien_inst"                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:16:alien_inst"                                                                                                                    ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                      ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; game_over_i ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alien:\ALIEN_GEN:4:alien_inst"                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien_draw:\ALIEN_GEN:15:alien_draw_inst"                                                                                                                     ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; alien_pos_x_i[31..10] ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; alien_pos_y_i[31..9]  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; draw_o                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; clk                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; rst                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alien:\ALIEN_GEN:3:alien_inst"                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:15:alien_inst"                                                                                                                    ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                      ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; game_over_i ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alien:\ALIEN_GEN:2:alien_inst"                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien_draw:\ALIEN_GEN:14:alien_draw_inst"                                                                                                                     ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; alien_pos_x_i[31..10] ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; alien_pos_y_i[31..9]  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; draw_o                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; clk                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; rst                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alien:\ALIEN_GEN:1:alien_inst"                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:14:alien_inst"                                                                                                                    ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                      ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; game_over_i ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alien:\ALIEN_GEN:0:alien_inst"                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; pos_x_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; pos_y_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; game_over_i ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien_draw:\ALIEN_GEN:13:alien_draw_inst"                                                                                                                     ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; alien_pos_x_i[31..10] ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; alien_pos_y_i[31..9]  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; draw_o                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; clk                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; rst                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:13:alien_inst"                                                                                                                    ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                      ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; game_over_i ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien_draw:\ALIEN_GEN:12:alien_draw_inst"                                                                                                                     ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; alien_pos_x_i[31..10] ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; alien_pos_y_i[31..9]  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; draw_o                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; clk                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; rst                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:12:alien_inst"                                                                                                                    ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                      ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; game_over_i ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien_draw:\ALIEN_GEN:11:alien_draw_inst"                                                                                                                     ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; alien_pos_x_i[31..10] ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; alien_pos_y_i[31..9]  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; draw_o                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; clk                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; rst                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:11:alien_inst"                                                                                                                    ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                      ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; game_over_i ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien_draw:\ALIEN_GEN:10:alien_draw_inst"                                                                                                                     ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; alien_pos_x_i[31..10] ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; alien_pos_y_i[31..9]  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; draw_o                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; clk                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; rst                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:10:alien_inst"                                                                                                                    ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                      ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; game_over_i ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien_draw:\ALIEN_GEN:9:alien_draw_inst"                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; alien_pos_x_i[31..10] ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; alien_pos_y_i[31..9]  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; draw_o                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; clk                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; rst                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:9:alien_inst"                                                                                                                     ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                      ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; game_over_i ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien_draw:\ALIEN_GEN:8:alien_draw_inst"                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; alien_pos_x_i[31..10] ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; alien_pos_y_i[31..9]  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; draw_o                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; clk                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; rst                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:8:alien_inst"                                                                                                                     ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                      ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; game_over_i ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien_draw:\ALIEN_GEN:7:alien_draw_inst"                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; alien_pos_x_i[31..10] ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; alien_pos_y_i[31..9]  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; draw_o                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; clk                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; rst                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:7:alien_inst"                                                                                                                     ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                      ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; game_over_i ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien_draw:\ALIEN_GEN:6:alien_draw_inst"                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; alien_pos_x_i[31..10] ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; alien_pos_y_i[31..9]  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; draw_o                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; clk                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; rst                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:6:alien_inst"                                                                                                                     ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                      ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; game_over_i ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien_draw:\ALIEN_GEN:5:alien_draw_inst"                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; alien_pos_x_i[31..10] ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; alien_pos_y_i[31..9]  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; draw_o                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; clk                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; rst                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:5:alien_inst"                                                                                                                     ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                      ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; game_over_i ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien_draw:\ALIEN_GEN:4:alien_draw_inst"                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; alien_pos_x_i[31..10] ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; alien_pos_y_i[31..9]  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; draw_o                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; clk                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; rst                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:4:alien_inst"                                                                                                                     ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                      ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; game_over_i ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien_draw:\ALIEN_GEN:3:alien_draw_inst"                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; alien_pos_x_i[31..10] ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; alien_pos_y_i[31..9]  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; draw_o                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; clk                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; rst                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:3:alien_inst"                                                                                                                     ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                      ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; game_over_i ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien_draw:\ALIEN_GEN:2:alien_draw_inst"                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; alien_pos_x_i[31..10] ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; alien_pos_y_i[31..9]  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; draw_o                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; clk                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; rst                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:2:alien_inst"                                                                                                                     ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                      ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; game_over_i ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien_draw:\ALIEN_GEN:1:alien_draw_inst"                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; alien_pos_x_i[31..10] ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; alien_pos_y_i[31..9]  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; draw_o                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; clk                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; rst                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:1:alien_inst"                                                                                                                     ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                      ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; game_over_i ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien_draw:\ALIEN_GEN:0:alien_draw_inst"                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; alien_pos_x_i[31..10] ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; alien_pos_y_i[31..9]  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; draw_o                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; clk                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; rst                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-----------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alien:\ALIEN_GEN:0:alien_inst"                                                                                                                     ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                      ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; game_over_i ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "VGA_drvr:vga_driver_inst"                                                                                         ;
++---------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                                                  ;
++---------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; i_red_in      ; Input  ; Info     ; Stuck at GND                                                                                             ;
+; i_green_in    ; Input  ; Info     ; Stuck at GND                                                                                             ;
+; o_vid_display ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -1021,13 +1398,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 3                           ;
-; cycloneiii_lcell_comb ; 1                           ;
-;     normal            ; 1                           ;
-;         0 data inputs ; 1                           ;
+; boundary_port         ; 18                          ;
+; cycloneiii_ff         ; 20                          ;
+;     CLR               ; 2                           ;
+;     CLR SCLR          ; 10                          ;
+;     ENA CLR           ; 8                           ;
+; cycloneiii_lcell_comb ; 44                          ;
+;     arith             ; 18                          ;
+;         2 data inputs ; 18                          ;
+;     normal            ; 26                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 8                           ;
+;         4 data inputs ; 12                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.55                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1046,10 +1433,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Jul 01 20:20:40 2025
+    Info: Processing started: Sat Jul 05 20:49:49 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off spaceInvaders -c spaceInvaders
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file entities/vga_drvr.vhd
+    Info (12022): Found design unit 1: VGA_drvr-behavioral File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/VGA_drvr.vhd Line: 98
+    Info (12023): Found entity 1: VGA_drvr File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/VGA_drvr.vhd Line: 52
 Info (12021): Found 2 design units, including 1 entities, in source file entities/alien.vhd
     Info (12022): Found design unit 1: alien-behavior File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien.vhd Line: 40
     Info (12023): Found entity 1: alien File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien.vhd Line: 14
@@ -1061,61 +1451,77 @@ Info (12021): Found 2 design units, including 1 entities, in source file entitie
     Info (12022): Found design unit 1: alien_controller-behavior File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 31
     Info (12023): Found entity 1: alien_controller File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 13
 Info (12021): Found 2 design units, including 1 entities, in source file entities/alien_horde.vhd
-    Info (12022): Found design unit 1: alien_horde-structure File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 26
-    Info (12023): Found entity 1: alien_horde File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 13
-Info (12021): Found 1 design units, including 0 entities, in source file packages/common_pkg.vhd
-    Info (12022): Found design unit 1: common_pkg File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Packages/common_pkg.vhd Line: 4
+    Info (12022): Found design unit 1: alien_horde-structure File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 30
+    Info (12023): Found entity 1: alien_horde File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 12
+Info (12021): Found 2 design units, including 1 entities, in source file entities/alien_draw.vhd
+    Info (12022): Found design unit 1: alien_draw-behavior File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_draw.vhd Line: 33
+    Info (12023): Found entity 1: alien_draw File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_draw.vhd Line: 18
 Info (12127): Elaborating entity "alien_horde" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at alien_horde.vhd(85): object "aliens_pos_x_s" assigned a value but never read File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 85
-Warning (10036): Verilog HDL or VHDL warning at alien_horde.vhd(86): object "aliens_pos_y_s" assigned a value but never read File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 86
-Info (12128): Elaborating entity "alien_controller" for hierarchy "alien_controller:controller_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 91
+Warning (10036): Verilog HDL or VHDL warning at alien_horde.vhd(122): object "aliens_draw_s" assigned a value but never read File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 122
+Warning (10541): VHDL Signal Declaration warning at alien_horde.vhd(123): used implicit default value for signal "combined_draw_s" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 123
+Info (12128): Elaborating entity "alien_controller" for hierarchy "alien_controller:controller_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
 Warning (10541): VHDL Signal Declaration warning at alien_controller.vhd(24): used implicit default value for signal "down_o" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 24
 Warning (10541): VHDL Signal Declaration warning at alien_controller.vhd(25): used implicit default value for signal "left_o" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 25
 Warning (10541): VHDL Signal Declaration warning at alien_controller.vhd(26): used implicit default value for signal "right_o" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 26
 Warning (10620): VHDL warning at alien_controller.vhd(50): comparison between unequal length operands always returns FALSE File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_controller.vhd Line: 50
-Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:0:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
-Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:1:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
-Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:2:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
-Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:3:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
-Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:4:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
-Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:5:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
-Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:6:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
-Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:7:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
-Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:8:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
-Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:9:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
-Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:10:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
-Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:11:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
-Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:12:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
-Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:13:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
-Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:14:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
-Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:15:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
-Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:16:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
-Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:17:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
-Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:18:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
-Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:19:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
-Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:20:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
-Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:21:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
-Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:22:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
-Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:23:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
-Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:24:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
-Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:25:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
-Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:26:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 129
-Warning (12241): 27 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12128): Elaborating entity "VGA_drvr" for hierarchy "VGA_drvr:vga_driver_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 146
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:0:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 185
+Info (12128): Elaborating entity "alien_draw" for hierarchy "alien_draw:\ALIEN_GEN:0:alien_draw_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 206
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:1:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 185
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:2:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 185
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:3:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 185
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:4:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 185
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:5:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 185
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:6:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 185
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:7:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 185
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:8:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 185
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:9:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 185
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:10:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 185
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:11:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 185
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:12:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 185
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:13:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 185
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:14:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 185
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:15:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 185
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:16:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 185
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:17:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 185
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:18:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 185
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:19:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 185
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:20:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 185
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:21:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 185
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:22:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 185
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:23:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 185
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:24:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 185
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:25:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 185
+Info (12128): Elaborating entity "alien" for hierarchy "alien:\ALIEN_GEN:26:alien_inst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 185
+Warning (12241): 55 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "game_over" is stuck at VCC File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 22
+    Warning (13410): Pin "game_over" is stuck at VCC File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 19
+    Warning (13410): Pin "o_red_out[0]" is stuck at GND File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 24
+    Warning (13410): Pin "o_red_out[1]" is stuck at GND File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 24
+    Warning (13410): Pin "o_red_out[2]" is stuck at GND File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 24
+    Warning (13410): Pin "o_red_out[3]" is stuck at GND File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 24
+    Warning (13410): Pin "o_green_out[0]" is stuck at GND File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 25
+    Warning (13410): Pin "o_green_out[1]" is stuck at GND File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 25
+    Warning (13410): Pin "o_green_out[2]" is stuck at GND File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 25
+    Warning (13410): Pin "o_green_out[3]" is stuck at GND File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 25
+    Warning (13410): Pin "o_blue_out[0]" is stuck at GND File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 26
+    Warning (13410): Pin "o_blue_out[1]" is stuck at GND File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 26
+    Warning (13410): Pin "o_blue_out[2]" is stuck at GND File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 26
+    Warning (13410): Pin "o_blue_out[3]" is stuck at GND File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 26
+Info (286030): Timing-Driven Synthesis is running
 Info (17049): 435 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 15
-    Warning (15610): No output dependent on input pin "rst" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 16
-Info (21057): Implemented 3 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 1 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 4795 megabytes
-    Info: Processing ended: Tue Jul 01 20:20:55 2025
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:32
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk" File: D:/UTFPR/eng_comp/logica_reconfiguravel/spaceInvaders/Entities/alien_horde.vhd Line: 14
+Info (21057): Implemented 60 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 15 output pins
+    Info (21061): Implemented 42 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 24 warnings
+    Info: Peak virtual memory: 4842 megabytes
+    Info: Processing ended: Sat Jul 05 20:50:06 2025
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:34
 
 

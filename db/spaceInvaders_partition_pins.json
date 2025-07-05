@@ -2,7 +2,24 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "o_h_sync",
+					"strict" : false
+				},
+				{
+					"name" : "o_v_sync",
+					"strict" : false
+				},
+				{
+					"name" : "vid_clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				}
+			]
 		}
 	]
 }

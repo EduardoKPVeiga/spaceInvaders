@@ -8,18 +8,22 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use work.resolution_pkg.all;
 use work.alien_pkg.all;
-use work.common_pkg.all;
 
 entity alien_horde is
 	port(
 		clk			: in	std_logic;
+		vid_clk		: in	std_logic; -- VGA pixel clock (e.g., 25.175 MHz for 640x480)
 		rst			: in	std_logic;
 		
-		-- The large position vectors have been removed from the port
-		-- to ensure the design fits on the FPGA.
-		
 		-- Game status output
-		game_over	: out	std_logic
+		game_over	: out	std_logic;
+		
+		-- VGA outputs
+		o_h_sync    : out std_logic;
+		o_v_sync    : out std_logic;
+		o_red_out   : out std_logic_vector(3 downto 0);
+		o_green_out : out std_logic_vector(3 downto 0);
+		o_blue_out  : out std_logic_vector(3 downto 0)
 	);
 end entity alien_horde;
 
@@ -62,6 +66,33 @@ architecture structure of alien_horde is
 			game_over_o	: out 	std_logic
 		);
 	end component;
+	
+	component alien_draw is
+		port(
+			alien_pos_x_i	: in	integer;
+			alien_pos_y_i	: in	integer;
+			vga_driver_x_i	: in	std_logic_vector(9 downto 0);
+			vga_driver_y_i	: in	std_logic_vector(9 downto 0);
+			draw_o	: out	std_logic
+		);
+	end component;
+
+	component VGA_drvr is
+		port(
+			i_vid_clk: 		in 	std_logic;
+			i_rstb: 			in 	std_logic;
+			o_h_sync:		out 	std_logic;
+			o_v_sync:		out 	std_logic;
+			o_pixel_x: 		out 	std_logic_vector (9 downto 0);
+			o_pixel_y: 		out 	std_logic_vector (9 downto 0);
+			i_red_in:     	in 	std_logic_vector(3 downto 0);
+			i_green_in:		in		std_logic_vector(3 downto 0);
+			i_blue_in:		in		std_logic_vector(3 downto 0);
+			o_red_out:		out 	std_logic_vector(3 downto 0);
+			o_green_out:	out	std_logic_vector(3 downto 0);
+			o_blue_out:		out	std_logic_vector(3 downto 0)
+	  );
+	end component;
 
 	-- Signals to connect controller and aliens
 	signal ctrl_down_cmd		: std_logic;
@@ -85,6 +116,13 @@ architecture structure of alien_horde is
 	signal aliens_pos_x_s: integer_vector(QT_ALIENS - 1 downto 0);
 	signal aliens_pos_y_s: integer_vector(QT_ALIENS - 1 downto 0);
 
+	-- Signals for VGA driver and drawing logic
+    signal vga_pixel_x_s    : std_logic_vector(9 downto 0);
+    signal vga_pixel_y_s    : std_logic_vector(9 downto 0);
+    signal aliens_draw_s    : std_logic_vector(QT_ALIENS - 1 downto 0);
+    signal combined_draw_s  : std_logic;
+	signal vga_rst_n		: std_logic;
+
 begin
 
 	-- Instantiate the main controller
@@ -102,6 +140,24 @@ begin
 			right_o			=> ctrl_right_cmd,
 			game_over_o		=> ctrl_game_over_cmd
 		);
+		
+	-- Instantiate the VGA driver
+	vga_rst_n <= not rst; -- VGA driver uses active-low reset
+	vga_driver_inst : VGA_drvr
+        port map(
+            i_vid_clk   => vid_clk,
+            i_rstb      => vga_rst_n,
+            o_h_sync    => o_h_sync,
+            o_v_sync    => o_v_sync,
+            o_pixel_x   => vga_pixel_x_s,
+            o_pixel_y   => vga_pixel_y_s,
+            i_red_in    => (others => '0'),
+            i_green_in  => (others => '0'),
+            i_blue_in   => (others => combined_draw_s), -- Combined draw signal drives blue
+            o_red_out   => o_red_out,
+            o_green_out => o_green_out,
+            o_blue_out  => o_blue_out
+        );
 
 	-- Combine all 'turn' signals from aliens into one using an OR reduction.
 	-- If any alien needs to turn, the controller is notified.
@@ -145,6 +201,17 @@ begin
 				turn_o			=> aliens_turn(i),
 				game_over_o		=> aliens_game_over(i)
 			);
+			
+			-- Instantiate the drawing logic for this alien
+        alien_draw_inst : alien_draw
+            port map(
+                alien_pos_x_i   => aliens_pos_x_s(i),
+                alien_pos_y_i   => aliens_pos_y_s(i),
+                vga_driver_x_i  => vga_pixel_x_s,
+                vga_driver_y_i  => vga_pixel_y_s,
+                draw_o          => aliens_draw_s(i)
+            );
+			
 	end generate ALIEN_GEN;
 
 end architecture structure;
