@@ -18,8 +18,8 @@ entity player is
         enable              : in  std_logic;
         move_left           : in  std_logic;
         move_right          : in  std_logic;
-        h_cnt               : in  integer;
-        v_cnt               : in  integer;
+        h_cnt               : in  integer;     -- h_cnt: current horizontal pixel index from VGA driver (0 = left);
+        v_cnt               : in  integer;     -- v_cnt: current vertical pixel index (0 = top)
         pixel_on            : out std_logic;
         left_limit_reached  : out std_logic;
         right_limit_reached : out std_logic
@@ -70,8 +70,7 @@ begin
     right_limit_reached <= '1' when player_x = SCREEN_W - P_WIDTH else '0';
 
     -- Sprite draw logic: check if current beam position overlaps a '1' in ROM
-    -- h_cnt: current horizontal pixel index from VGA driver (0 = left); v_cnt: current vertical pixel index (0 = top)
-    process(player_x, h_cnt, v_cnt)
+
     process(player_x, h_cnt, v_cnt)
         variable row_idx : integer;
         variable col_idx : integer;
