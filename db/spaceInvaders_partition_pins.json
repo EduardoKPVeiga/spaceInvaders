@@ -4,15 +4,31 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "o_h_sync",
+					"name" : "vga_h_sync",
 					"strict" : false
 				},
 				{
-					"name" : "o_v_sync",
+					"name" : "vga_v_sync",
 					"strict" : false
 				},
 				{
-					"name" : "vid_clk",
+					"name" : "vga_r[0]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_r[1]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_r[2]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_r[3]",
+					"strict" : false
+				},
+				{
+					"name" : "clk_50mhz",
 					"strict" : false
 				},
 				{

@@ -9,27 +9,30 @@ entity player is
         SCREEN_H : integer := 480;
         P_WIDTH  : integer := 16;
         P_HEIGHT : integer := 8;
-        P_Y      : integer := SCREEN_H - P_HEIGHT - 4;
         P_SPEED  : integer := 2
     );
     port (
-        clk                 : in  std_logic;
-        reset               : in  std_logic;
-        enable              : in  std_logic;
-        move_left           : in  std_logic;
-        move_right          : in  std_logic;
-        h_cnt               : in  integer;     -- h_cnt: current horizontal pixel index from VGA driver (0 = left);
-        v_cnt               : in  integer;     -- v_cnt: current vertical pixel index (0 = top)
-        pixel_on            : out std_logic;
-        left_limit_reached  : out std_logic;
-        right_limit_reached : out std_logic
+        clk         : in  std_logic;
+        reset       : in  std_logic;
+        enable      : in  std_logic;
+        move_left   : in  std_logic;
+        move_right  : in  std_logic;
+        h_cnt       : in  integer;     -- h_cnt: current horizontal pixel index from VGA driver
+        v_cnt       : in  integer;     -- v_cnt: current vertical pixel index
+        pixel_on    : out std_logic;
+        player_x_o  : out integer range 0 to SCREEN_W -- Output for player's X position
     );
 end entity player;
 
 architecture rtl of player is
-    -- Player position
+    -- Constant for player's vertical position, calculated from generics.
+    -- This resolves the VHDL error where a generic was defined by other generics.
+    constant P_Y : integer := SCREEN_H - P_HEIGHT - 4;
+
+    -- Player position signal
     signal player_x    : integer range 0 to SCREEN_W - P_WIDTH := (SCREEN_W - P_WIDTH) / 2;
-    -- Sequencing signals
+    
+    -- Internal signals for drawing logic
     signal player_on_s : std_logic;
     signal pixel_on_r  : std_logic;
 
@@ -37,19 +40,19 @@ architecture rtl of player is
     type rom_row_t is array (P_WIDTH - 1 downto 0) of std_logic;
     type sprite_rom_t is array (0 to P_HEIGHT - 1) of rom_row_t;
     constant SPRITE_ROM : sprite_rom_t := (
-        -- Example 16x8 ship; '1' = pixel on, '0' = transparent
-        0 => "0000000011110000",
-        1 => "0000000111111000",
-        2 => "0000011111111100",
-        3 => "0000111111111110",
-        4 => "0001111111111111",
-        5 => "0011111111111111",
-        6 => "0110011001100110",
-        7 => "0000001100000000"
+        -- 16x8 ship sprite; '1' = pixel on, '0' = transparent
+        0 => "0000000110000000",
+        1 => "0000001111000000",
+        2 => "0000011111100000",
+        3 => "0001111111110000",
+        4 => "0011111111111000",
+        5 => "0111111111111100",
+        6 => "1111111111111110",
+        7 => "1101100110011011"
     );
 
 begin
-    -- Movement
+    -- Player movement logic
     movement_proc: process(clk)
     begin
         if rising_edge(clk) then
@@ -65,24 +68,22 @@ begin
         end if;
     end process;
 
-    -- Boundary flags
-    left_limit_reached  <= '1' when player_x = 0 else '0';
-    right_limit_reached <= '1' when player_x = SCREEN_W - P_WIDTH else '0';
+    -- Continuously output the player's position
+    player_x_o <= player_x;
 
-    -- Sprite draw logic: check if current beam position overlaps a '1' in ROM
-
-    process(player_x, h_cnt, v_cnt)
+    -- Sprite drawing logic: check if the current VGA coordinates overlap a '1' in the ROM
+    draw_proc: process(player_x, h_cnt, v_cnt)
         variable row_idx : integer;
         variable col_idx : integer;
     begin
         player_on_s <= '0';
-        -- Check vertical range
+        -- Check if the beam is within the player's vertical range
         if v_cnt >= P_Y and v_cnt < P_Y + P_HEIGHT then
             row_idx := v_cnt - P_Y;
-            -- Check horizontal range
+            -- Check if the beam is within the player's horizontal range
             if h_cnt >= player_x and h_cnt < player_x + P_WIDTH then
                 col_idx := h_cnt - player_x;
-                -- ROM bit = '1' => pixel on
+                -- If the corresponding bit in the ROM is '1', turn the pixel on
                 if SPRITE_ROM(row_idx)(col_idx) = '1' then
                     player_on_s <= '1';
                 end if;
@@ -90,7 +91,7 @@ begin
         end if;
     end process;
 
-    -- Pipeline for timing
+    -- Pipeline the drawing signal for timing purposes
     pipeline_proc: process(clk)
     begin
         if rising_edge(clk) then

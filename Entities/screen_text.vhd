@@ -1,0 +1,120 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use work.resolution_pkg.all;
+
+-- This entity draws text for the Game Over and You Won screens.
+entity screen_text is
+    port(
+        -- VGA pixel counters
+        h_cnt       : in    integer range 0 to RES_WIDTH;
+        v_cnt       : in    integer range 0 to RES_HEIGHT;
+
+        -- Control signals
+        game_over_i : in    std_logic;
+        you_won_i   : in    std_logic;
+        
+        -- RGB output for the text
+        red_o       : out   std_logic_vector(3 downto 0);
+        green_o     : out   std_logic_vector(3 downto 0);
+        blue_o      : out   std_logic_vector(3 downto 0)
+    );
+end entity;
+
+architecture behavior of screen_text is
+    -- Font definition (8x8 pixels per character)
+    constant FONT_WIDTH  : integer := 8;
+    constant FONT_HEIGHT : integer := 8;
+    
+    type font_char_t is array (0 to FONT_HEIGHT - 1) of std_logic_vector(FONT_WIDTH - 1 downto 0);
+    type font_t is array (character) of font_char_t;
+
+    -- 8x8 Font ROM for required characters
+    constant FONT_ROM : font_t := (
+        ' ' => ( "00000000", "00000000", "00000000", "00000000", "00000000", "00000000", "00000000", "00000000" ),
+        '!' => ( "00011000", "00011000", "00011000", "00011000", "00011000", "00000000", "00011000", "00011000" ),
+        'A' => ( "00111100", "01100110", "01100110", "01111110", "01100110", "01100110", "01100110", "00000000" ),
+        'E' => ( "01111110", "01100000", "01100000", "01111100", "01100000", "01100000", "01111110", "00000000" ),
+        'G' => ( "00111110", "01100000", "01100000", "01101110", "01100110", "01100010", "00111110", "00000000" ),
+        'M' => ( "11000011", "11100111", "11011011", "11000011", "11000011", "11000011", "11000011", "00000000" ),
+        'N' => ( "01100110", "01110110", "01101110", "01100110", "01100110", "01100110", "01100110", "00000000" ),
+        'O' => ( "00111100", "01100110", "01100110", "01100110", "01100110", "01100110", "00111100", "00000000" ),
+        'R' => ( "01111100", "01100110", "01100110", "01111100", "01101100", "01100110", "01100110", "00000000" ),
+        'U' => ( "01100110", "01100110", "01100110", "01100110", "01100110", "01100110", "00111100", "00000000" ),
+        'V' => ( "01100110", "01100110", "01100110", "01100110", "01100110", "00111100", "00011000", "00000000" ),
+        'W' => ( "11000011", "11000011", "11000011", "11000011", "11011011", "11100111", "11000011", "00000000" ),
+        'Y' => ( "01100110", "01100110", "00111100", "00011000", "00011000", "00011000", "00011000", "00000000" ),
+        others => ("11111111","10000001","10111101","10111101","10111101","10000001","11111111","00000000") -- '?' for undefined
+    );
+
+    -- Message definitions
+    type string_t is array (natural range <>) of character;
+    constant MSG_GAME_OVER : string_t := "GAME OVER";
+    constant MSG_YOU_WON   : string_t := "YOU WON !";
+
+    -- Text color signals
+    signal text_r, text_g, text_b : std_logic_vector(3 downto 0);
+
+begin
+
+    -- This process handles drawing the text. It is purely combinatorial.
+    draw_text_proc: process(h_cnt, v_cnt, game_over_i, you_won_i)
+        variable msg_to_draw    : string_t(1 to 9) := "         "; -- 9 chars for "GAME OVER"
+        variable start_x, start_y : integer;
+        variable char_x, char_y   : integer;
+        variable font_col, font_row : integer;
+        variable current_char     : character;
+        variable pixel_on         : std_logic;
+    begin
+        -- Default to black background
+        text_r <= (others => '0');
+        text_g <= (others => '0');
+        text_b <= (others => '0');
+        pixel_on := '0';
+
+        if game_over_i = '1' then
+            msg_to_draw := MSG_GAME_OVER;
+            text_r <= "1111"; -- Red text
+        elsif you_won_i = '1' then
+            msg_to_draw := MSG_YOU_WON;
+            text_g <= "1111"; -- Green text
+        end if;
+        
+        -- Only proceed if one of the screens should be active
+        if game_over_i = '1' or you_won_i = '1' then
+            -- Calculate starting position to center the message
+            start_x := (RES_WIDTH - (msg_to_draw'length * FONT_WIDTH)) / 2;
+            start_y := (RES_HEIGHT - FONT_HEIGHT) / 2;
+
+            -- Check if the current pixel is within the message's bounding box
+            if  (h_cnt >= start_x and h_cnt < start_x + (msg_to_draw'length * FONT_WIDTH)) and
+                (v_cnt >= start_y and v_cnt < start_y + FONT_HEIGHT) then
+                
+                -- Determine which character and which pixel of that character to draw
+                char_x := (h_cnt - start_x) / FONT_WIDTH;
+                char_y := v_cnt - start_y;
+                
+                font_col := (h_cnt - start_x) mod FONT_WIDTH;
+                font_row := char_y;
+                
+                current_char := msg_to_draw(msg_to_draw'left + char_x);
+                
+                -- Look up the pixel in the font ROM
+                pixel_on := FONT_ROM(current_char)(font_row)(font_col);
+            end if;
+        end if;
+
+        -- Set the final output color if the pixel should be on
+        if pixel_on = '1' then
+            red_o   <= text_r;
+            green_o <= text_g;
+            blue_o  <= text_b;
+        else
+            red_o   <= (others => '0');
+            green_o <= (others => '0');
+            blue_o  <= (others => '0');
+        end if;
+        
+    end process;
+    
+end architecture;
