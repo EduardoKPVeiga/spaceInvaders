@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Mon Jul 07 20:22:10 2025
+Analysis & Synthesis Status : Successful - Mon Jul 07 20:38:15 2025
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : spaceInvaders
-Top-level Entity Name : space_invaders
+Top-level Entity Name : spaceInvaders
 Family : MAX 10
-Total logic elements : 195
-    Total combinational functions : 195
-    Dedicated logic registers : 21
-Total registers : 21
-Total pins : 18
+Total logic elements : 0
+    Total combinational functions : 0
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 4
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

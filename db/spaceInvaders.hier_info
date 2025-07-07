@@ -1,4 +1,13 @@
-|space_invaders
+|spaceInvaders
+MAX10_CLK2_50 => space_invaders:inst.clk_50mhz
+MAX10_CLK2_50 => VGA_drvr:inst1.i_vid_clk
+SW[0] => space_invaders:inst.rst
+SW[0] => VGA_drvr:inst1.i_rstb
+KEY[0] => space_invaders:inst.btn_left
+KEY[1] => space_invaders:inst.btn_right
+
+
+|spaceInvaders|space_invaders:inst
 clk_50mhz => VGA_drvr:vga_driver_inst.i_vid_clk
 clk_50mhz => player:player_inst.clk
 clk_50mhz => shot:shot_inst.clk
@@ -10,23 +19,23 @@ rst => alien_horde:alien_horde_inst.rst
 rst => VGA_drvr:vga_driver_inst.i_rstb
 btn_left => player:player_inst.move_left
 btn_right => player:player_inst.move_right
-vga_h_sync << VGA_drvr:vga_driver_inst.o_h_sync
-vga_v_sync << VGA_drvr:vga_driver_inst.o_v_sync
-vga_r[0] << VGA_drvr:vga_driver_inst.o_red_out[0]
-vga_r[1] << VGA_drvr:vga_driver_inst.o_red_out[1]
-vga_r[2] << VGA_drvr:vga_driver_inst.o_red_out[2]
-vga_r[3] << VGA_drvr:vga_driver_inst.o_red_out[3]
-vga_g[0] << VGA_drvr:vga_driver_inst.o_green_out[0]
-vga_g[1] << VGA_drvr:vga_driver_inst.o_green_out[1]
-vga_g[2] << VGA_drvr:vga_driver_inst.o_green_out[2]
-vga_g[3] << VGA_drvr:vga_driver_inst.o_green_out[3]
-vga_b[0] << VGA_drvr:vga_driver_inst.o_blue_out[0]
-vga_b[1] << VGA_drvr:vga_driver_inst.o_blue_out[1]
-vga_b[2] << VGA_drvr:vga_driver_inst.o_blue_out[2]
-vga_b[3] << VGA_drvr:vga_driver_inst.o_blue_out[3]
+vga_h_sync <= VGA_drvr:vga_driver_inst.o_h_sync
+vga_v_sync <= VGA_drvr:vga_driver_inst.o_v_sync
+vga_r[0] <= VGA_drvr:vga_driver_inst.o_red_out[0]
+vga_r[1] <= VGA_drvr:vga_driver_inst.o_red_out[1]
+vga_r[2] <= VGA_drvr:vga_driver_inst.o_red_out[2]
+vga_r[3] <= VGA_drvr:vga_driver_inst.o_red_out[3]
+vga_g[0] <= VGA_drvr:vga_driver_inst.o_green_out[0]
+vga_g[1] <= VGA_drvr:vga_driver_inst.o_green_out[1]
+vga_g[2] <= VGA_drvr:vga_driver_inst.o_green_out[2]
+vga_g[3] <= VGA_drvr:vga_driver_inst.o_green_out[3]
+vga_b[0] <= VGA_drvr:vga_driver_inst.o_blue_out[0]
+vga_b[1] <= VGA_drvr:vga_driver_inst.o_blue_out[1]
+vga_b[2] <= VGA_drvr:vga_driver_inst.o_blue_out[2]
+vga_b[3] <= VGA_drvr:vga_driver_inst.o_blue_out[3]
 
 
-|space_invaders|VGA_drvr:vga_driver_inst
+|spaceInvaders|space_invaders:inst|VGA_drvr:vga_driver_inst
 i_vid_clk => blue[0].CLK
 i_vid_clk => blue[1].CLK
 i_vid_clk => blue[2].CLK
@@ -140,7 +149,7 @@ o_blue_out[2] <= o_blue_out.DB_MAX_OUTPUT_PORT_TYPE
 o_blue_out[3] <= o_blue_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|player:player_inst
+|spaceInvaders|space_invaders:inst|player:player_inst
 clk => pixel_on~reg0.CLK
 clk => pixel_on_r.CLK
 clk => player_x[0].CLK
@@ -379,7 +388,7 @@ player_x_o[8] <= player_x[8].DB_MAX_OUTPUT_PORT_TYPE
 player_x_o[9] <= player_x[9].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|shot:shot_inst
+|spaceInvaders|space_invaders:inst|shot:shot_inst
 clk => shot_y_s[0].CLK
 clk => shot_y_s[1].CLK
 clk => shot_y_s[2].CLK
@@ -743,7 +752,7 @@ shot_y_o[31] <= <GND>
 active_o <= state.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst
 clk => alien_controller:controller_inst.clk
 clk => alien:ALIEN_GEN:0:alien_inst.clk
 clk => alien:ALIEN_GEN:1:alien_inst.clk
@@ -2575,7 +2584,7 @@ o_blue_out[2] <= VGA_drvr:vga_driver_inst.o_blue_out[2]
 o_blue_out[3] <= VGA_drvr:vga_driver_inst.o_blue_out[3]
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien_controller:controller_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien_controller:controller_inst
 clk => right_flag.CLK
 clk => left_flag.CLK
 clk => down_flag.CLK
@@ -2675,7 +2684,7 @@ right_o <= comb.DB_MAX_OUTPUT_PORT_TYPE
 game_over_o <= game_over_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|VGA_drvr:vga_driver_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|VGA_drvr:vga_driver_inst
 i_vid_clk => blue[0].CLK
 i_vid_clk => blue[1].CLK
 i_vid_clk => blue[2].CLK
@@ -2789,7 +2798,7 @@ o_blue_out[2] <= o_blue_out.DB_MAX_OUTPUT_PORT_TYPE
 o_blue_out[3] <= o_blue_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:0:alien_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:0:alien_inst
 clk => right_done_o~reg0.CLK
 clk => left_done_o~reg0.CLK
 clk => down_done_o~reg0.CLK
@@ -2929,7 +2938,7 @@ turn_o <= turn_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 game_over_o <= game_over_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:0:alien_draw_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:0:alien_draw_inst
 alien_pos_x_i[0] => LessThan2.IN54
 alien_pos_x_i[0] => Add5.IN64
 alien_pos_x_i[0] => Add6.IN64
@@ -3884,7 +3893,7 @@ vga_driver_y_i[9] => ~NO_FANOUT~
 draw_o <= draw_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:0:collision_controller_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:0:collision_controller_inst
 shot_x_i[0] => LessThan0.IN32
 shot_x_i[0] => LessThan1.IN62
 shot_x_i[1] => LessThan0.IN31
@@ -4146,7 +4155,7 @@ alien_is_alive_i => collision_check_proc.IN1
 collision_o <= collision_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:1:alien_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:1:alien_inst
 clk => right_done_o~reg0.CLK
 clk => left_done_o~reg0.CLK
 clk => down_done_o~reg0.CLK
@@ -4286,7 +4295,7 @@ turn_o <= turn_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 game_over_o <= game_over_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:1:alien_draw_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:1:alien_draw_inst
 alien_pos_x_i[0] => LessThan2.IN54
 alien_pos_x_i[0] => Add5.IN64
 alien_pos_x_i[0] => Add6.IN64
@@ -5241,7 +5250,7 @@ vga_driver_y_i[9] => ~NO_FANOUT~
 draw_o <= draw_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:1:collision_controller_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:1:collision_controller_inst
 shot_x_i[0] => LessThan0.IN32
 shot_x_i[0] => LessThan1.IN62
 shot_x_i[1] => LessThan0.IN31
@@ -5503,7 +5512,7 @@ alien_is_alive_i => collision_check_proc.IN1
 collision_o <= collision_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:2:alien_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:2:alien_inst
 clk => right_done_o~reg0.CLK
 clk => left_done_o~reg0.CLK
 clk => down_done_o~reg0.CLK
@@ -5643,7 +5652,7 @@ turn_o <= turn_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 game_over_o <= game_over_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:2:alien_draw_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:2:alien_draw_inst
 alien_pos_x_i[0] => LessThan2.IN54
 alien_pos_x_i[0] => Add5.IN64
 alien_pos_x_i[0] => Add6.IN64
@@ -6598,7 +6607,7 @@ vga_driver_y_i[9] => ~NO_FANOUT~
 draw_o <= draw_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:2:collision_controller_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:2:collision_controller_inst
 shot_x_i[0] => LessThan0.IN32
 shot_x_i[0] => LessThan1.IN62
 shot_x_i[1] => LessThan0.IN31
@@ -6860,7 +6869,7 @@ alien_is_alive_i => collision_check_proc.IN1
 collision_o <= collision_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:3:alien_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:3:alien_inst
 clk => right_done_o~reg0.CLK
 clk => left_done_o~reg0.CLK
 clk => down_done_o~reg0.CLK
@@ -7000,7 +7009,7 @@ turn_o <= turn_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 game_over_o <= game_over_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:3:alien_draw_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:3:alien_draw_inst
 alien_pos_x_i[0] => LessThan2.IN54
 alien_pos_x_i[0] => Add5.IN64
 alien_pos_x_i[0] => Add6.IN64
@@ -7955,7 +7964,7 @@ vga_driver_y_i[9] => ~NO_FANOUT~
 draw_o <= draw_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:3:collision_controller_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:3:collision_controller_inst
 shot_x_i[0] => LessThan0.IN32
 shot_x_i[0] => LessThan1.IN62
 shot_x_i[1] => LessThan0.IN31
@@ -8217,7 +8226,7 @@ alien_is_alive_i => collision_check_proc.IN1
 collision_o <= collision_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:4:alien_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:4:alien_inst
 clk => right_done_o~reg0.CLK
 clk => left_done_o~reg0.CLK
 clk => down_done_o~reg0.CLK
@@ -8357,7 +8366,7 @@ turn_o <= turn_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 game_over_o <= game_over_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:4:alien_draw_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:4:alien_draw_inst
 alien_pos_x_i[0] => LessThan2.IN54
 alien_pos_x_i[0] => Add5.IN64
 alien_pos_x_i[0] => Add6.IN64
@@ -9312,7 +9321,7 @@ vga_driver_y_i[9] => ~NO_FANOUT~
 draw_o <= draw_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:4:collision_controller_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:4:collision_controller_inst
 shot_x_i[0] => LessThan0.IN32
 shot_x_i[0] => LessThan1.IN62
 shot_x_i[1] => LessThan0.IN31
@@ -9574,7 +9583,7 @@ alien_is_alive_i => collision_check_proc.IN1
 collision_o <= collision_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:5:alien_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:5:alien_inst
 clk => right_done_o~reg0.CLK
 clk => left_done_o~reg0.CLK
 clk => down_done_o~reg0.CLK
@@ -9714,7 +9723,7 @@ turn_o <= turn_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 game_over_o <= game_over_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:5:alien_draw_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:5:alien_draw_inst
 alien_pos_x_i[0] => LessThan2.IN54
 alien_pos_x_i[0] => Add5.IN64
 alien_pos_x_i[0] => Add6.IN64
@@ -10669,7 +10678,7 @@ vga_driver_y_i[9] => ~NO_FANOUT~
 draw_o <= draw_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:5:collision_controller_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:5:collision_controller_inst
 shot_x_i[0] => LessThan0.IN32
 shot_x_i[0] => LessThan1.IN62
 shot_x_i[1] => LessThan0.IN31
@@ -10931,7 +10940,7 @@ alien_is_alive_i => collision_check_proc.IN1
 collision_o <= collision_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:6:alien_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:6:alien_inst
 clk => right_done_o~reg0.CLK
 clk => left_done_o~reg0.CLK
 clk => down_done_o~reg0.CLK
@@ -11071,7 +11080,7 @@ turn_o <= turn_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 game_over_o <= game_over_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:6:alien_draw_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:6:alien_draw_inst
 alien_pos_x_i[0] => LessThan2.IN54
 alien_pos_x_i[0] => Add5.IN64
 alien_pos_x_i[0] => Add6.IN64
@@ -12026,7 +12035,7 @@ vga_driver_y_i[9] => ~NO_FANOUT~
 draw_o <= draw_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:6:collision_controller_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:6:collision_controller_inst
 shot_x_i[0] => LessThan0.IN32
 shot_x_i[0] => LessThan1.IN62
 shot_x_i[1] => LessThan0.IN31
@@ -12288,7 +12297,7 @@ alien_is_alive_i => collision_check_proc.IN1
 collision_o <= collision_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:7:alien_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:7:alien_inst
 clk => right_done_o~reg0.CLK
 clk => left_done_o~reg0.CLK
 clk => down_done_o~reg0.CLK
@@ -12428,7 +12437,7 @@ turn_o <= turn_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 game_over_o <= game_over_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:7:alien_draw_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:7:alien_draw_inst
 alien_pos_x_i[0] => LessThan2.IN54
 alien_pos_x_i[0] => Add5.IN64
 alien_pos_x_i[0] => Add6.IN64
@@ -13383,7 +13392,7 @@ vga_driver_y_i[9] => ~NO_FANOUT~
 draw_o <= draw_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:7:collision_controller_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:7:collision_controller_inst
 shot_x_i[0] => LessThan0.IN32
 shot_x_i[0] => LessThan1.IN62
 shot_x_i[1] => LessThan0.IN31
@@ -13645,7 +13654,7 @@ alien_is_alive_i => collision_check_proc.IN1
 collision_o <= collision_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:8:alien_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:8:alien_inst
 clk => right_done_o~reg0.CLK
 clk => left_done_o~reg0.CLK
 clk => down_done_o~reg0.CLK
@@ -13785,7 +13794,7 @@ turn_o <= turn_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 game_over_o <= game_over_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:8:alien_draw_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:8:alien_draw_inst
 alien_pos_x_i[0] => LessThan2.IN54
 alien_pos_x_i[0] => Add5.IN64
 alien_pos_x_i[0] => Add6.IN64
@@ -14740,7 +14749,7 @@ vga_driver_y_i[9] => ~NO_FANOUT~
 draw_o <= draw_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:8:collision_controller_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:8:collision_controller_inst
 shot_x_i[0] => LessThan0.IN32
 shot_x_i[0] => LessThan1.IN62
 shot_x_i[1] => LessThan0.IN31
@@ -15002,7 +15011,7 @@ alien_is_alive_i => collision_check_proc.IN1
 collision_o <= collision_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:9:alien_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:9:alien_inst
 clk => right_done_o~reg0.CLK
 clk => left_done_o~reg0.CLK
 clk => down_done_o~reg0.CLK
@@ -15142,7 +15151,7 @@ turn_o <= turn_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 game_over_o <= game_over_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:9:alien_draw_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:9:alien_draw_inst
 alien_pos_x_i[0] => LessThan2.IN54
 alien_pos_x_i[0] => Add5.IN64
 alien_pos_x_i[0] => Add6.IN64
@@ -16097,7 +16106,7 @@ vga_driver_y_i[9] => ~NO_FANOUT~
 draw_o <= draw_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:9:collision_controller_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:9:collision_controller_inst
 shot_x_i[0] => LessThan0.IN32
 shot_x_i[0] => LessThan1.IN62
 shot_x_i[1] => LessThan0.IN31
@@ -16359,7 +16368,7 @@ alien_is_alive_i => collision_check_proc.IN1
 collision_o <= collision_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:10:alien_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:10:alien_inst
 clk => right_done_o~reg0.CLK
 clk => left_done_o~reg0.CLK
 clk => down_done_o~reg0.CLK
@@ -16499,7 +16508,7 @@ turn_o <= turn_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 game_over_o <= game_over_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:10:alien_draw_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:10:alien_draw_inst
 alien_pos_x_i[0] => LessThan2.IN54
 alien_pos_x_i[0] => Add5.IN64
 alien_pos_x_i[0] => Add6.IN64
@@ -17454,7 +17463,7 @@ vga_driver_y_i[9] => ~NO_FANOUT~
 draw_o <= draw_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:10:collision_controller_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:10:collision_controller_inst
 shot_x_i[0] => LessThan0.IN32
 shot_x_i[0] => LessThan1.IN62
 shot_x_i[1] => LessThan0.IN31
@@ -17716,7 +17725,7 @@ alien_is_alive_i => collision_check_proc.IN1
 collision_o <= collision_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:11:alien_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:11:alien_inst
 clk => right_done_o~reg0.CLK
 clk => left_done_o~reg0.CLK
 clk => down_done_o~reg0.CLK
@@ -17856,7 +17865,7 @@ turn_o <= turn_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 game_over_o <= game_over_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:11:alien_draw_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:11:alien_draw_inst
 alien_pos_x_i[0] => LessThan2.IN54
 alien_pos_x_i[0] => Add5.IN64
 alien_pos_x_i[0] => Add6.IN64
@@ -18811,7 +18820,7 @@ vga_driver_y_i[9] => ~NO_FANOUT~
 draw_o <= draw_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:11:collision_controller_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:11:collision_controller_inst
 shot_x_i[0] => LessThan0.IN32
 shot_x_i[0] => LessThan1.IN62
 shot_x_i[1] => LessThan0.IN31
@@ -19073,7 +19082,7 @@ alien_is_alive_i => collision_check_proc.IN1
 collision_o <= collision_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:12:alien_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:12:alien_inst
 clk => right_done_o~reg0.CLK
 clk => left_done_o~reg0.CLK
 clk => down_done_o~reg0.CLK
@@ -19213,7 +19222,7 @@ turn_o <= turn_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 game_over_o <= game_over_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:12:alien_draw_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:12:alien_draw_inst
 alien_pos_x_i[0] => LessThan2.IN54
 alien_pos_x_i[0] => Add5.IN64
 alien_pos_x_i[0] => Add6.IN64
@@ -20168,7 +20177,7 @@ vga_driver_y_i[9] => ~NO_FANOUT~
 draw_o <= draw_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:12:collision_controller_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:12:collision_controller_inst
 shot_x_i[0] => LessThan0.IN32
 shot_x_i[0] => LessThan1.IN62
 shot_x_i[1] => LessThan0.IN31
@@ -20430,7 +20439,7 @@ alien_is_alive_i => collision_check_proc.IN1
 collision_o <= collision_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:13:alien_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:13:alien_inst
 clk => right_done_o~reg0.CLK
 clk => left_done_o~reg0.CLK
 clk => down_done_o~reg0.CLK
@@ -20570,7 +20579,7 @@ turn_o <= turn_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 game_over_o <= game_over_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:13:alien_draw_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:13:alien_draw_inst
 alien_pos_x_i[0] => LessThan2.IN54
 alien_pos_x_i[0] => Add5.IN64
 alien_pos_x_i[0] => Add6.IN64
@@ -21525,7 +21534,7 @@ vga_driver_y_i[9] => ~NO_FANOUT~
 draw_o <= draw_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:13:collision_controller_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:13:collision_controller_inst
 shot_x_i[0] => LessThan0.IN32
 shot_x_i[0] => LessThan1.IN62
 shot_x_i[1] => LessThan0.IN31
@@ -21787,7 +21796,7 @@ alien_is_alive_i => collision_check_proc.IN1
 collision_o <= collision_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:14:alien_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:14:alien_inst
 clk => right_done_o~reg0.CLK
 clk => left_done_o~reg0.CLK
 clk => down_done_o~reg0.CLK
@@ -21927,7 +21936,7 @@ turn_o <= turn_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 game_over_o <= game_over_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:14:alien_draw_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:14:alien_draw_inst
 alien_pos_x_i[0] => LessThan2.IN54
 alien_pos_x_i[0] => Add5.IN64
 alien_pos_x_i[0] => Add6.IN64
@@ -22882,7 +22891,7 @@ vga_driver_y_i[9] => ~NO_FANOUT~
 draw_o <= draw_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:14:collision_controller_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:14:collision_controller_inst
 shot_x_i[0] => LessThan0.IN32
 shot_x_i[0] => LessThan1.IN62
 shot_x_i[1] => LessThan0.IN31
@@ -23144,7 +23153,7 @@ alien_is_alive_i => collision_check_proc.IN1
 collision_o <= collision_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:15:alien_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:15:alien_inst
 clk => right_done_o~reg0.CLK
 clk => left_done_o~reg0.CLK
 clk => down_done_o~reg0.CLK
@@ -23284,7 +23293,7 @@ turn_o <= turn_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 game_over_o <= game_over_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:15:alien_draw_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:15:alien_draw_inst
 alien_pos_x_i[0] => LessThan2.IN54
 alien_pos_x_i[0] => Add5.IN64
 alien_pos_x_i[0] => Add6.IN64
@@ -24239,7 +24248,7 @@ vga_driver_y_i[9] => ~NO_FANOUT~
 draw_o <= draw_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:15:collision_controller_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:15:collision_controller_inst
 shot_x_i[0] => LessThan0.IN32
 shot_x_i[0] => LessThan1.IN62
 shot_x_i[1] => LessThan0.IN31
@@ -24501,7 +24510,7 @@ alien_is_alive_i => collision_check_proc.IN1
 collision_o <= collision_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:16:alien_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:16:alien_inst
 clk => right_done_o~reg0.CLK
 clk => left_done_o~reg0.CLK
 clk => down_done_o~reg0.CLK
@@ -24641,7 +24650,7 @@ turn_o <= turn_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 game_over_o <= game_over_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:16:alien_draw_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:16:alien_draw_inst
 alien_pos_x_i[0] => LessThan2.IN54
 alien_pos_x_i[0] => Add5.IN64
 alien_pos_x_i[0] => Add6.IN64
@@ -25596,7 +25605,7 @@ vga_driver_y_i[9] => ~NO_FANOUT~
 draw_o <= draw_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:16:collision_controller_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:16:collision_controller_inst
 shot_x_i[0] => LessThan0.IN32
 shot_x_i[0] => LessThan1.IN62
 shot_x_i[1] => LessThan0.IN31
@@ -25858,7 +25867,7 @@ alien_is_alive_i => collision_check_proc.IN1
 collision_o <= collision_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:17:alien_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:17:alien_inst
 clk => right_done_o~reg0.CLK
 clk => left_done_o~reg0.CLK
 clk => down_done_o~reg0.CLK
@@ -25998,7 +26007,7 @@ turn_o <= turn_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 game_over_o <= game_over_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:17:alien_draw_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:17:alien_draw_inst
 alien_pos_x_i[0] => LessThan2.IN54
 alien_pos_x_i[0] => Add5.IN64
 alien_pos_x_i[0] => Add6.IN64
@@ -26953,7 +26962,7 @@ vga_driver_y_i[9] => ~NO_FANOUT~
 draw_o <= draw_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:17:collision_controller_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:17:collision_controller_inst
 shot_x_i[0] => LessThan0.IN32
 shot_x_i[0] => LessThan1.IN62
 shot_x_i[1] => LessThan0.IN31
@@ -27215,7 +27224,7 @@ alien_is_alive_i => collision_check_proc.IN1
 collision_o <= collision_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:18:alien_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:18:alien_inst
 clk => right_done_o~reg0.CLK
 clk => left_done_o~reg0.CLK
 clk => down_done_o~reg0.CLK
@@ -27355,7 +27364,7 @@ turn_o <= turn_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 game_over_o <= game_over_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:18:alien_draw_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:18:alien_draw_inst
 alien_pos_x_i[0] => LessThan2.IN54
 alien_pos_x_i[0] => Add5.IN64
 alien_pos_x_i[0] => Add6.IN64
@@ -28310,7 +28319,7 @@ vga_driver_y_i[9] => ~NO_FANOUT~
 draw_o <= draw_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:18:collision_controller_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:18:collision_controller_inst
 shot_x_i[0] => LessThan0.IN32
 shot_x_i[0] => LessThan1.IN62
 shot_x_i[1] => LessThan0.IN31
@@ -28572,7 +28581,7 @@ alien_is_alive_i => collision_check_proc.IN1
 collision_o <= collision_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:19:alien_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:19:alien_inst
 clk => right_done_o~reg0.CLK
 clk => left_done_o~reg0.CLK
 clk => down_done_o~reg0.CLK
@@ -28712,7 +28721,7 @@ turn_o <= turn_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 game_over_o <= game_over_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:19:alien_draw_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:19:alien_draw_inst
 alien_pos_x_i[0] => LessThan2.IN54
 alien_pos_x_i[0] => Add5.IN64
 alien_pos_x_i[0] => Add6.IN64
@@ -29667,7 +29676,7 @@ vga_driver_y_i[9] => ~NO_FANOUT~
 draw_o <= draw_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:19:collision_controller_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:19:collision_controller_inst
 shot_x_i[0] => LessThan0.IN32
 shot_x_i[0] => LessThan1.IN62
 shot_x_i[1] => LessThan0.IN31
@@ -29929,7 +29938,7 @@ alien_is_alive_i => collision_check_proc.IN1
 collision_o <= collision_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:20:alien_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:20:alien_inst
 clk => right_done_o~reg0.CLK
 clk => left_done_o~reg0.CLK
 clk => down_done_o~reg0.CLK
@@ -30069,7 +30078,7 @@ turn_o <= turn_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 game_over_o <= game_over_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:20:alien_draw_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:20:alien_draw_inst
 alien_pos_x_i[0] => LessThan2.IN54
 alien_pos_x_i[0] => Add5.IN64
 alien_pos_x_i[0] => Add6.IN64
@@ -31024,7 +31033,7 @@ vga_driver_y_i[9] => ~NO_FANOUT~
 draw_o <= draw_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:20:collision_controller_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:20:collision_controller_inst
 shot_x_i[0] => LessThan0.IN32
 shot_x_i[0] => LessThan1.IN62
 shot_x_i[1] => LessThan0.IN31
@@ -31286,7 +31295,7 @@ alien_is_alive_i => collision_check_proc.IN1
 collision_o <= collision_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:21:alien_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:21:alien_inst
 clk => right_done_o~reg0.CLK
 clk => left_done_o~reg0.CLK
 clk => down_done_o~reg0.CLK
@@ -31426,7 +31435,7 @@ turn_o <= turn_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 game_over_o <= game_over_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:21:alien_draw_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:21:alien_draw_inst
 alien_pos_x_i[0] => LessThan2.IN54
 alien_pos_x_i[0] => Add5.IN64
 alien_pos_x_i[0] => Add6.IN64
@@ -32381,7 +32390,7 @@ vga_driver_y_i[9] => ~NO_FANOUT~
 draw_o <= draw_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:21:collision_controller_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:21:collision_controller_inst
 shot_x_i[0] => LessThan0.IN32
 shot_x_i[0] => LessThan1.IN62
 shot_x_i[1] => LessThan0.IN31
@@ -32643,7 +32652,7 @@ alien_is_alive_i => collision_check_proc.IN1
 collision_o <= collision_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:22:alien_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:22:alien_inst
 clk => right_done_o~reg0.CLK
 clk => left_done_o~reg0.CLK
 clk => down_done_o~reg0.CLK
@@ -32783,7 +32792,7 @@ turn_o <= turn_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 game_over_o <= game_over_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:22:alien_draw_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:22:alien_draw_inst
 alien_pos_x_i[0] => LessThan2.IN54
 alien_pos_x_i[0] => Add5.IN64
 alien_pos_x_i[0] => Add6.IN64
@@ -33738,7 +33747,7 @@ vga_driver_y_i[9] => ~NO_FANOUT~
 draw_o <= draw_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:22:collision_controller_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:22:collision_controller_inst
 shot_x_i[0] => LessThan0.IN32
 shot_x_i[0] => LessThan1.IN62
 shot_x_i[1] => LessThan0.IN31
@@ -34000,7 +34009,7 @@ alien_is_alive_i => collision_check_proc.IN1
 collision_o <= collision_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:23:alien_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:23:alien_inst
 clk => right_done_o~reg0.CLK
 clk => left_done_o~reg0.CLK
 clk => down_done_o~reg0.CLK
@@ -34140,7 +34149,7 @@ turn_o <= turn_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 game_over_o <= game_over_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:23:alien_draw_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:23:alien_draw_inst
 alien_pos_x_i[0] => LessThan2.IN54
 alien_pos_x_i[0] => Add5.IN64
 alien_pos_x_i[0] => Add6.IN64
@@ -35095,7 +35104,7 @@ vga_driver_y_i[9] => ~NO_FANOUT~
 draw_o <= draw_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:23:collision_controller_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:23:collision_controller_inst
 shot_x_i[0] => LessThan0.IN32
 shot_x_i[0] => LessThan1.IN62
 shot_x_i[1] => LessThan0.IN31
@@ -35357,7 +35366,7 @@ alien_is_alive_i => collision_check_proc.IN1
 collision_o <= collision_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:24:alien_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:24:alien_inst
 clk => right_done_o~reg0.CLK
 clk => left_done_o~reg0.CLK
 clk => down_done_o~reg0.CLK
@@ -35497,7 +35506,7 @@ turn_o <= turn_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 game_over_o <= game_over_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:24:alien_draw_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:24:alien_draw_inst
 alien_pos_x_i[0] => LessThan2.IN54
 alien_pos_x_i[0] => Add5.IN64
 alien_pos_x_i[0] => Add6.IN64
@@ -36452,7 +36461,7 @@ vga_driver_y_i[9] => ~NO_FANOUT~
 draw_o <= draw_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:24:collision_controller_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:24:collision_controller_inst
 shot_x_i[0] => LessThan0.IN32
 shot_x_i[0] => LessThan1.IN62
 shot_x_i[1] => LessThan0.IN31
@@ -36714,7 +36723,7 @@ alien_is_alive_i => collision_check_proc.IN1
 collision_o <= collision_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:25:alien_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:25:alien_inst
 clk => right_done_o~reg0.CLK
 clk => left_done_o~reg0.CLK
 clk => down_done_o~reg0.CLK
@@ -36854,7 +36863,7 @@ turn_o <= turn_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 game_over_o <= game_over_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:25:alien_draw_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:25:alien_draw_inst
 alien_pos_x_i[0] => LessThan2.IN54
 alien_pos_x_i[0] => Add5.IN64
 alien_pos_x_i[0] => Add6.IN64
@@ -37809,7 +37818,7 @@ vga_driver_y_i[9] => ~NO_FANOUT~
 draw_o <= draw_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:25:collision_controller_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:25:collision_controller_inst
 shot_x_i[0] => LessThan0.IN32
 shot_x_i[0] => LessThan1.IN62
 shot_x_i[1] => LessThan0.IN31
@@ -38071,7 +38080,7 @@ alien_is_alive_i => collision_check_proc.IN1
 collision_o <= collision_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:26:alien_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien:\ALIEN_GEN:26:alien_inst
 clk => right_done_o~reg0.CLK
 clk => left_done_o~reg0.CLK
 clk => down_done_o~reg0.CLK
@@ -38211,7 +38220,7 @@ turn_o <= turn_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 game_over_o <= game_over_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:26:alien_draw_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|alien_draw:\ALIEN_GEN:26:alien_draw_inst
 alien_pos_x_i[0] => LessThan2.IN54
 alien_pos_x_i[0] => Add5.IN64
 alien_pos_x_i[0] => Add6.IN64
@@ -39166,7 +39175,7 @@ vga_driver_y_i[9] => ~NO_FANOUT~
 draw_o <= draw_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:26:collision_controller_inst
+|spaceInvaders|space_invaders:inst|alien_horde:alien_horde_inst|collision_controller:\ALIEN_GEN:26:collision_controller_inst
 shot_x_i[0] => LessThan0.IN32
 shot_x_i[0] => LessThan1.IN62
 shot_x_i[1] => LessThan0.IN31
@@ -39428,7 +39437,7 @@ alien_is_alive_i => collision_check_proc.IN1
 collision_o <= collision_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|space_invaders|screen_text:screen_text_inst
+|spaceInvaders|space_invaders:inst|screen_text:screen_text_inst
 h_cnt[0] => LessThan0.IN20
 h_cnt[0] => LessThan1.IN20
 h_cnt[0] => WideOr0.IN1
@@ -39568,5 +39577,119 @@ blue_o[0] <= <GND>
 blue_o[1] <= <GND>
 blue_o[2] <= <GND>
 blue_o[3] <= <GND>
+
+
+|spaceInvaders|VGA_drvr:inst1
+i_vid_clk => blue[0].CLK
+i_vid_clk => blue[1].CLK
+i_vid_clk => blue[2].CLK
+i_vid_clk => blue[3].CLK
+i_vid_clk => green[0].CLK
+i_vid_clk => green[1].CLK
+i_vid_clk => green[2].CLK
+i_vid_clk => green[3].CLK
+i_vid_clk => red[0].CLK
+i_vid_clk => red[1].CLK
+i_vid_clk => red[2].CLK
+i_vid_clk => red[3].CLK
+i_vid_clk => h_count[0].CLK
+i_vid_clk => h_count[1].CLK
+i_vid_clk => h_count[2].CLK
+i_vid_clk => h_count[3].CLK
+i_vid_clk => h_count[4].CLK
+i_vid_clk => h_count[5].CLK
+i_vid_clk => h_count[6].CLK
+i_vid_clk => h_count[7].CLK
+i_vid_clk => h_count[8].CLK
+i_vid_clk => h_count[9].CLK
+i_vid_clk => v_count[0].CLK
+i_vid_clk => v_count[1].CLK
+i_vid_clk => v_count[2].CLK
+i_vid_clk => v_count[3].CLK
+i_vid_clk => v_count[4].CLK
+i_vid_clk => v_count[5].CLK
+i_vid_clk => v_count[6].CLK
+i_vid_clk => v_count[7].CLK
+i_vid_clk => v_count[8].CLK
+i_vid_clk => v_count[9].CLK
+i_rstb => blue[0].ACLR
+i_rstb => blue[1].ACLR
+i_rstb => blue[2].ACLR
+i_rstb => blue[3].ACLR
+i_rstb => green[0].ACLR
+i_rstb => green[1].ACLR
+i_rstb => green[2].ACLR
+i_rstb => green[3].ACLR
+i_rstb => red[0].ACLR
+i_rstb => red[1].ACLR
+i_rstb => red[2].ACLR
+i_rstb => red[3].ACLR
+i_rstb => h_count[0].ACLR
+i_rstb => h_count[1].ACLR
+i_rstb => h_count[2].ACLR
+i_rstb => h_count[3].ACLR
+i_rstb => h_count[4].ACLR
+i_rstb => h_count[5].ACLR
+i_rstb => h_count[6].ACLR
+i_rstb => h_count[7].ACLR
+i_rstb => h_count[8].ACLR
+i_rstb => h_count[9].ACLR
+i_rstb => v_count[0].ACLR
+i_rstb => v_count[1].ACLR
+i_rstb => v_count[2].ACLR
+i_rstb => v_count[3].ACLR
+i_rstb => v_count[4].ACLR
+i_rstb => v_count[5].ACLR
+i_rstb => v_count[6].ACLR
+i_rstb => v_count[7].ACLR
+i_rstb => v_count[8].ACLR
+i_rstb => v_count[9].ACLR
+o_h_sync <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+o_v_sync <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+o_pixel_x[0] <= o_pixel_x.DB_MAX_OUTPUT_PORT_TYPE
+o_pixel_x[1] <= o_pixel_x.DB_MAX_OUTPUT_PORT_TYPE
+o_pixel_x[2] <= o_pixel_x.DB_MAX_OUTPUT_PORT_TYPE
+o_pixel_x[3] <= o_pixel_x.DB_MAX_OUTPUT_PORT_TYPE
+o_pixel_x[4] <= o_pixel_x.DB_MAX_OUTPUT_PORT_TYPE
+o_pixel_x[5] <= o_pixel_x.DB_MAX_OUTPUT_PORT_TYPE
+o_pixel_x[6] <= o_pixel_x.DB_MAX_OUTPUT_PORT_TYPE
+o_pixel_x[7] <= o_pixel_x.DB_MAX_OUTPUT_PORT_TYPE
+o_pixel_x[8] <= o_pixel_x.DB_MAX_OUTPUT_PORT_TYPE
+o_pixel_x[9] <= o_pixel_x.DB_MAX_OUTPUT_PORT_TYPE
+o_pixel_y[0] <= o_pixel_y.DB_MAX_OUTPUT_PORT_TYPE
+o_pixel_y[1] <= o_pixel_y.DB_MAX_OUTPUT_PORT_TYPE
+o_pixel_y[2] <= o_pixel_y.DB_MAX_OUTPUT_PORT_TYPE
+o_pixel_y[3] <= o_pixel_y.DB_MAX_OUTPUT_PORT_TYPE
+o_pixel_y[4] <= o_pixel_y.DB_MAX_OUTPUT_PORT_TYPE
+o_pixel_y[5] <= o_pixel_y.DB_MAX_OUTPUT_PORT_TYPE
+o_pixel_y[6] <= o_pixel_y.DB_MAX_OUTPUT_PORT_TYPE
+o_pixel_y[7] <= o_pixel_y.DB_MAX_OUTPUT_PORT_TYPE
+o_pixel_y[8] <= o_pixel_y.DB_MAX_OUTPUT_PORT_TYPE
+o_pixel_y[9] <= o_pixel_y.DB_MAX_OUTPUT_PORT_TYPE
+o_vid_display <= display_on.DB_MAX_OUTPUT_PORT_TYPE
+i_red_in[0] => red[0].DATAIN
+i_red_in[1] => red[1].DATAIN
+i_red_in[2] => red[2].DATAIN
+i_red_in[3] => red[3].DATAIN
+i_green_in[0] => green[0].DATAIN
+i_green_in[1] => green[1].DATAIN
+i_green_in[2] => green[2].DATAIN
+i_green_in[3] => green[3].DATAIN
+i_blue_in[0] => blue[0].DATAIN
+i_blue_in[1] => blue[1].DATAIN
+i_blue_in[2] => blue[2].DATAIN
+i_blue_in[3] => blue[3].DATAIN
+o_red_out[0] <= o_red_out.DB_MAX_OUTPUT_PORT_TYPE
+o_red_out[1] <= o_red_out.DB_MAX_OUTPUT_PORT_TYPE
+o_red_out[2] <= o_red_out.DB_MAX_OUTPUT_PORT_TYPE
+o_red_out[3] <= o_red_out.DB_MAX_OUTPUT_PORT_TYPE
+o_green_out[0] <= o_green_out.DB_MAX_OUTPUT_PORT_TYPE
+o_green_out[1] <= o_green_out.DB_MAX_OUTPUT_PORT_TYPE
+o_green_out[2] <= o_green_out.DB_MAX_OUTPUT_PORT_TYPE
+o_green_out[3] <= o_green_out.DB_MAX_OUTPUT_PORT_TYPE
+o_blue_out[0] <= o_blue_out.DB_MAX_OUTPUT_PORT_TYPE
+o_blue_out[1] <= o_blue_out.DB_MAX_OUTPUT_PORT_TYPE
+o_blue_out[2] <= o_blue_out.DB_MAX_OUTPUT_PORT_TYPE
+o_blue_out[3] <= o_blue_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
