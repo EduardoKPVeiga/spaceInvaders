@@ -199,7 +199,8 @@ begin
 				left_done_o		=> aliens_left_done(i),
 				right_done_o	=> aliens_right_done(i),
 				turn_o			=> aliens_turn(i),
-				game_over_o		=> aliens_game_over(i)
+				game_over_o		=> aliens_game_over(i),
+				
 			);
 			
 			-- Instantiate the drawing logic for this alien

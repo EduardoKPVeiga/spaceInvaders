@@ -37,6 +37,12 @@ architecture behavior of alien_controller is
 	
 	constant ALL_DOWN : std_logic_vector(QT_ALIENS downto 0) := (others => '1'); -- used only to compare
 	
+	component col_controller is
+		port(
+			--
+		);
+	end component;
+	
 begin
 	process(clk, rst)
 	begin

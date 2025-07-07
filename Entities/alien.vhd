@@ -28,6 +28,7 @@ entity alien is
 		left_i		: in	std_logic;
 		right_i		: in	std_logic;
 		game_over_i	: in	std_logic;
+		die			: in	std_logic;
 		
 		down_done_o	: out	std_logic;
 		left_done_o	: out	std_logic;
@@ -47,12 +48,16 @@ begin
 			if (rst = '1') then
 				-- Do the RESET logic
 			end if;
+			
+			if (die = '1') then
+				
+			end if;
 		
 			if (game_over_i = '1') then
 				-- Do the GAME OVER logic
 			
 			elsif (down_i = '1') then
-				if (pos_y_s + ALIEN_MOVE_IT >= END_LINE) then -- Alien reach the spaceship line
+				if (pos_y_s + ALIEN_MOVE_IT >= END_LINE) and (die = '0') then -- Alien reach the spaceship line
 					game_over_o	<= '1';
 					down_done_o		<= '0';
 					right_done_o		<= '0';
