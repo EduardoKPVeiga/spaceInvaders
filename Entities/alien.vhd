@@ -27,9 +27,6 @@ entity alien is
 		is_alive_o	: out	std_logic; -- Output to signal if the alien is alive
 		
 		-- Feedback to controller
-		down_done_o	: out	std_logic;
-		left_done_o	: out	std_logic;
-		right_done_o: out	std_logic;
 		turn_o		: out	std_logic;
 		game_over_o	: out 	std_logic
 	);
@@ -41,24 +38,18 @@ architecture behavior of alien is
 	signal is_alive_s	: std_logic := '1';
 begin
 
-	process(clk)
+	process(clk, rst)
 	begin
-		if rising_edge(clk) then
-			if (rst = '1') then
+		if (rst = '1') then
 				-- Reset alien to initial state
 				pos_x_s <= init_pos_x;
 				pos_y_s <= init_pos_y;
 				is_alive_s <= '1';
 				game_over_o <= '0';
 				turn_o <= '0';
-				down_done_o <= '0';
-				left_done_o <= '0';
-				right_done_o <= '0';
-			else
+				
+		elsif rising_edge(clk) then
 				-- Default outputs to '0' each cycle to prevent latches
-				down_done_o  <= '0';
-				left_done_o  <= '0';
-				right_done_o <= '0';
 				turn_o       <= '0';
 				game_over_o  <= '0';
 
@@ -76,7 +67,6 @@ begin
 							game_over_o	<= '1';
 						else
 							pos_y_s <= pos_y_s + ALIEN_MOVE_IT;
-							down_done_o <= '1';
 						end if;
 					elsif (left_i = '1') then
 						if (pos_x_s <= ALIEN_MOVE_IT) then -- Alien reached the left screen edge
@@ -84,17 +74,15 @@ begin
 						else
 							pos_x_s <= pos_x_s - ALIEN_MOVE_IT;
 						end if;
-						left_done_o <= '1';
+
 					elsif (right_i = '1') then
 						if (pos_x_s + ALIEN_WIDTH + ALIEN_MOVE_IT >= RES_WIDTH) then -- Alien reached the right screen edge
 							turn_o <= '1';
 						else
 							pos_x_s <= pos_x_s + ALIEN_MOVE_IT;
 						end if;
-						right_done_o <= '1';
 					end if;
 				end if;
-			end if;
 		end if;
 	end process;
 

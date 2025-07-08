@@ -15,9 +15,6 @@ entity alien_controller is
 		clk	: in	std_logic;
 		rst	: in	std_logic;
 		
-		down_done_i	: in	std_logic_vector(QT_ALIENS - 1 downto 0);
-		left_done_i	: in	std_logic_vector(QT_ALIENS - 1 downto 0);
-		right_done_i: in	std_logic_vector(QT_ALIENS - 1 downto 0);
 		turn_i		: in	std_logic;
 		game_over_i	: in	std_logic;
 		
@@ -35,26 +32,28 @@ architecture behavior of alien_controller is
 	signal left_flag	: std_logic	:= '0';
 	signal right_flag	: std_logic	:= '0';
 	
-	constant ALL_DOWN : std_logic_vector(QT_ALIENS downto 0) := (others => '1'); -- used only to compare
-	
 begin
-	process(clk, rst)
+	down_o <= down_flag;
+	left_o <= left_flag;
+	right_o <= right_flag;
+	
+	process(clk, game_over_i, rst)
 	begin
+		if rst = '1' then
+			-- Do the RESET logic
+		end if;
+		
 		if rising_edge(clk) then
-			if rst = '1' then
-				-- Do the RESET logic
-			end if;
 		
 			-- Move down handler -----------------------------------
 			if down_flag = '1' then
-				if down_done_i = ALL_DOWN then
-					down_flag <= '0';
-					if prev_x_axis_move = '0' then
-						right_flag <= '1';
-					else
-						left_flag <= '1';
-					end if;
+				down_flag <= '0';
+				if prev_x_axis_move = '0' then
+					right_flag <= '1';
+				else
+					left_flag <= '1';
 				end if;
+					
 				if game_over_i = '1' then
 					game_over_o <= '1';
 					down_flag <= '0';
