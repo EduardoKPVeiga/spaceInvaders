@@ -43,14 +43,14 @@ ENTITY count_shot IS
 	PORT
 	(
 		clock		: IN STD_LOGIC ;
-		q		: OUT STD_LOGIC_VECTOR (21 DOWNTO 0)
+		q		: OUT STD_LOGIC_VECTOR (23 DOWNTO 0)
 	);
 END count_shot;
 
 
 ARCHITECTURE SYN OF count_shot IS
 
-	SIGNAL sub_wire0	: STD_LOGIC_VECTOR (21 DOWNTO 0);
+	SIGNAL sub_wire0	: STD_LOGIC_VECTOR (23 DOWNTO 0);
 
 
 
@@ -63,19 +63,19 @@ ARCHITECTURE SYN OF count_shot IS
 	);
 	PORT (
 			clock	: IN STD_LOGIC ;
-			q	: OUT STD_LOGIC_VECTOR (21 DOWNTO 0)
+			q	: OUT STD_LOGIC_VECTOR (23 DOWNTO 0)
 	);
 	END COMPONENT;
 
 BEGIN
-	q    <= sub_wire0(21 DOWNTO 0);
+	q    <= sub_wire0(23 DOWNTO 0);
 
 	LPM_COUNTER_component : LPM_COUNTER
 	GENERIC MAP (
 		lpm_direction => "UP",
 		lpm_port_updown => "PORT_UNUSED",
 		lpm_type => "LPM_COUNTER",
-		lpm_width => 22
+		lpm_width => 24
 	)
 	PORT MAP (
 		clock => clock,
@@ -106,17 +106,17 @@ END SYN;
 -- Retrieval info: PRIVATE: SSET NUMERIC "0"
 -- Retrieval info: PRIVATE: SSET_ALL1 NUMERIC "1"
 -- Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
--- Retrieval info: PRIVATE: nBit NUMERIC "22"
+-- Retrieval info: PRIVATE: nBit NUMERIC "24"
 -- Retrieval info: PRIVATE: new_diagram STRING "1"
 -- Retrieval info: LIBRARY: lpm lpm.lpm_components.all
 -- Retrieval info: CONSTANT: LPM_DIRECTION STRING "UP"
 -- Retrieval info: CONSTANT: LPM_PORT_UPDOWN STRING "PORT_UNUSED"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_COUNTER"
--- Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "22"
+-- Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "24"
 -- Retrieval info: USED_PORT: clock 0 0 0 0 INPUT NODEFVAL "clock"
--- Retrieval info: USED_PORT: q 0 0 22 0 OUTPUT NODEFVAL "q[21..0]"
+-- Retrieval info: USED_PORT: q 0 0 24 0 OUTPUT NODEFVAL "q[23..0]"
 -- Retrieval info: CONNECT: @clock 0 0 0 0 clock 0 0 0 0
--- Retrieval info: CONNECT: q 0 0 22 0 @q 0 0 22 0
+-- Retrieval info: CONNECT: q 0 0 24 0 @q 0 0 24 0
 -- Retrieval info: GEN_FILE: TYPE_NORMAL count_shot.vhd TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL count_shot.inc TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL count_shot.cmp TRUE

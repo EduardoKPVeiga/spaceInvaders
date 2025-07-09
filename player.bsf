@@ -115,7 +115,7 @@ refer to the applicable agreement for further details.
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"P_SPEED"
-		"4"
+		"100"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing

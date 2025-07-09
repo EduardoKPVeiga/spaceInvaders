@@ -242,6 +242,11 @@ set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity DE10_LITE_Defa
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity DE10_LITE_Default -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -entity DE10_LITE_Default -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE10_LITE_Default -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity vga1 -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity vga1 -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity vga1 -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -entity vga1 -section_id Top
+set_global_assignment -name VHDL_FILE Entities/game_clock_divider.vhd
 set_global_assignment -name VHDL_FILE Entities/pll_25MHz.vhd
 set_global_assignment -name VHDL_FILE Entities/collision_controller.vhd
 set_global_assignment -name VHDL_FILE Entities/player.vhd
@@ -256,10 +261,6 @@ set_global_assignment -name VHDL_FILE Entities/space_invaders.vhd
 set_global_assignment -name VHDL_FILE Entities/shot.vhd
 set_global_assignment -name VHDL_FILE Entities/screen_text.vhd
 set_global_assignment -name BDF_FILE spaceInvaders.bdf
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity vga1 -section_id Top
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity vga1 -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity vga1 -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -entity vga1 -section_id Top
 set_global_assignment -name QIP_FILE count_shot.qip
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top

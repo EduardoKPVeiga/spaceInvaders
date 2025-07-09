@@ -1,0 +1,35 @@
+-- ===================================================================
+-- File: game_clock_divider.vhd
+-- Description: Divide 50 MHz input clock down to ~24 Hz game clock
+-- ===================================================================
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity game_clock_divider is
+  port (
+    clk_50MHz : in  std_logic;  -- 50 MHz input clock
+    reset     : in  std_logic;  -- synchronous reset, active high
+    game_clk  : out std_logic   -- ~23.84 Hz output clock (bit 20 of divider)
+  );
+end entity;
+
+architecture rtl of game_clock_divider is
+  signal div_cnt : unsigned(20 downto 0) := (others => '0');
+begin
+
+  -- Divider process: free-run counter
+  process(clk_50MHz)
+  begin
+    if rising_edge(clk_50MHz) then
+      if reset = '1' then
+        div_cnt  <= (others => '0');
+        game_clk <= '0';
+      else
+        div_cnt  <= div_cnt + 1;
+        game_clk <= div_cnt(19);
+      end if;
+    end if;
+  end process;
+
+end architecture;

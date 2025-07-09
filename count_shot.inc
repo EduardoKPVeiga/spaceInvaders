@@ -19,5 +19,5 @@ FUNCTION count_shot
 )
 
 RETURNS (
-	q[21..0]
+	q[23..0]
 );

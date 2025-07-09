@@ -6,12 +6,12 @@ use work.alien_pkg.all;
 
 entity shot is
 	generic (
-		FIRE_RATE_CYCLES : integer := 100
+		FIRE_RATE_CYCLES : integer := 48
 	);
 	port (
-		clk         : in  std_logic;
+		clk_move		: in  std_logic;
+		clk_draw		: in  std_logic;
 		rst         : in  std_logic;
-		enable      : in  std_logic;      -- To pause the shot when game is over
 		player_x_i  : in  integer;        -- To know where to fire from
 		vga_driver_x_i	: in	std_logic_vector(9 downto 0);
 		vga_driver_y_i	: in	std_logic_vector(9 downto 0);
@@ -49,17 +49,36 @@ begin
 	v_cnt	<=	to_integer(unsigned(vga_driver_y_i));
 	
 	-- Shot logic process
-	process(clk)
+	process(clk_move)
 	begin
-		if rising_edge(clk) then
+		if rising_edge(clk_move) then
 			if rst = '1' then
-				shot_y_s <= PLAYER_Y_POS;
-			elsif enable = '1' then
-				if shot_y_s - SHOT_SPEED < 0 then
-					shot_y_s <= shot_y_s - SHOT_SPEED;
-				else
-					shot_y_s <= PLAYER_Y_POS;
-				end if;
+				shot_y_s			<= PLAYER_Y_POS;
+				fire_counter_s <= 0;
+				state          <= IDLE;
+			else
+				case state is
+                    when IDLE =>
+                        -- count up until we auto-fire
+                        if fire_counter_s < FIRE_RATE_CYCLES then
+                            fire_counter_s <= fire_counter_s + 1;
+                        else
+                            fire_counter_s <= 0;
+                            state          <= FIRING;
+                            shot_x_s       <= player_x_i + 8;        -- lock in X
+                            shot_y_s       <= PLAYER_Y_POS;      -- start at player
+                        end if;
+
+                    when FIRING =>
+                        -- move up
+                        if shot_y_s > SHOT_SPEED then
+                            shot_y_s <= shot_y_s - SHOT_SPEED;
+                        else
+                            -- reached top → go back to IDLE
+                            state <= IDLE;
+                        end if;
+
+                end case;
 			end if;
 		end if;
 	end process;
@@ -72,7 +91,7 @@ begin
 	shot_y_o <= shot_y_s;
 
 	-- Drawing logic for the shot (a simple vertical rectangle)
-	draw_proc: process(h_cnt, v_cnt, shot_x_s, shot_y_s, state)
+	draw_proc: process(clk_draw)
 	begin
 		pixel_on_o <= '0';
 		if state = FIRING then

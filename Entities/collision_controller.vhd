@@ -31,19 +31,19 @@ begin
 		collision_o <= '0';
 
 		-- A collision can only happen if a shot is active and the alien is still alive.
-		--if shot_active_i = '1' and alien_is_alive_i = '1' then
+		if shot_active_i = '1' and alien_is_alive_i = '1' then
 					
 			-- Simple AABB (Axis-Aligned Bounding Box) collision detection.
 			-- This checks if the shot's (x,y) coordinate is within the alien's box.
-			--if  (shot_x_i >= alien_x_i) and
-				--(shot_x_i < alien_x_i + ALIEN_WIDTH) and
-				--(shot_y_i >= alien_y_i) and
-				--(shot_y_i < alien_y_i + ALIEN_HEIGHT) then
+			if  (shot_x_i >= alien_x_i) and
+				(shot_x_i < alien_x_i + ALIEN_WIDTH) and
+				(shot_y_i >= alien_y_i) and
+				(shot_y_i < alien_y_i + ALIEN_HEIGHT) then
 							 
 				-- Collision detected!
-				--collision_o <= '1';
-			--end if;
-		--end if;
+				collision_o <= '1';
+			end if;
+		end if;
 	end process collision_check_proc;
 
 end architecture;

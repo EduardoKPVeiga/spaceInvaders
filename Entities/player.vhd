@@ -9,7 +9,7 @@ entity player is
 		SCREEN_H : integer := 480;
 		P_WIDTH  : integer := 16;
 		P_HEIGHT : integer := 8;
-		P_SPEED  : integer := 4
+		P_SPEED  : integer := 100
 	);
 	port (
 		clk_move		: in  std_logic;
